@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 # Boosstrap sass to prettify stuff
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

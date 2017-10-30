@@ -20,11 +20,11 @@ Things we have impoved on:
 
 Our team
 
-* Albert - C0 Founder
+* Albert - Co Founder
 
 * Vivien - Co Founder
 
-* Aaron - Collabator
+* Aaron - Full Stack Developer - Collabator
 
 * Cebrian - Collabator
 
@@ -35,4 +35,4 @@ Planning
 
 Site map
 
-![site map image](../planning/site_map_01.png "Site Map .01")
+![site map image](planning/site_map_01.png "Site Map v.01")

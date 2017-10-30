@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is Curricupi.com version 2
+It is currently on development only and has not been test for deployment
 
-Things you may want to cover:
 
-* Ruby version
+Things we have impoved on:
 
-* System dependencies
+* User accessibility
+
+* Simplicity
 
 * Configuration
 
 * Database creation
 
-* Database initialization
+* Teacher Log in
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Our team
 
-* ...
+* Albert - C0 Founder
+
+* Vivien - Co Founder
+
+* Aaron - Collabator
+
+* Cebrian - Collabator
+
+* Stephanine - UX & UI Designer
+

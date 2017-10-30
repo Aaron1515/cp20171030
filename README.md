@@ -30,3 +30,9 @@ Our team
 
 * Stephanine - UX & UI Designer
 
+
+Planning
+
+Site map
+
+![site map image](../planning/site_map_01.png "Site Map .01")

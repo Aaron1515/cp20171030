@@ -6,9 +6,107 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
 
   <body>
+
+
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Logo Here</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		      	<!-- Insert for things on the nav bar on the left side -->
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      	<li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lessons <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Fundementals</a></li>
+		            <li><a href="#">Robot Car</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+		      	<li><a href="#">Resource</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">What We Offer</a></li>
+		            <li><a href="#">Who We Are</a></li>
+		            <li><a href="#">In The News</a></li>
+		          </ul>
+		        </li>
+		        <li><a href="#">Contact</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+
+
+
+
+
     <%= yield %>
+
+
+
+
+
+    <div class="footer container">
+    	<div class="row">
+	    	<div class="col-sm-4 col-md-4 col-xl-4">
+					<!-- Add font awesome icons -->
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-instagram"></a>
+					<a href="#" class="fa fa-twitter"></a>	
+				</div>
+
+				<div class="col-sm-4 col-md-4 col-xl-4">
+					Sign Up News letter
+					<form class="form-horizontal">
+					  <div class="form-group">
+					    <label class="control-label col-sm-2" for="email">Name:</label>
+					    <div class="col-sm-10">
+					      <input type="email" class="form-control" id="email" placeholder="Enter email">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label col-sm-2" for="pwd">Email:</label>
+					    <div class="col-sm-10"> 
+					      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+					    </div>
+					  </div>
+					  <div class="form-group"> 
+					    <div class="col-sm-offset-2 col-sm-10">
+					      <button type="submit" class="btn btn-default">Subscribe</button>
+					    </div>
+					  </div>
+					</form>
+				</div>
+
+				<div class="col-sm-4 col-md-4 col-xl-4">
+					Stuff here
+				</div>
+			</div>
+    </div>
+
   </body>
 </html>

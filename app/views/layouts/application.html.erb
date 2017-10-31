@@ -18,6 +18,7 @@
 
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
+
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -26,93 +27,49 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">Logo Here</a>
-		    </div>
+		      <%= link_to "Logo Here", root_path, class: 'navbar-brand' %>
+		      </div>
 
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		      	<!-- Insert for things on the nav bar on the left side -->
-		      </ul>
-		      <ul class="nav navbar-nav navbar-right">
-		      	<li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lessons <span class="caret"></span></a>
-		          <ul class="dropdown-menu">
-		            <li><a href="#">Fundementals</a></li>
-		            <li><a href="#">Robot Car</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#">Separated link</a></li>
-		          </ul>
-		        </li>
-		      	<li><a href="#">Resource</a></li>
-		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
-		          <ul class="dropdown-menu">
-		            <li><a href="#">What We Offer</a></li>
-		            <li><a href="#">Who We Are</a></li>
-		            <li><a href="#">In The News</a></li>
-		          </ul>
-		        </li>
-		        <li><a href="#">Contact</a></li>
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			      	<!-- Insert for things on the nav bar on the left side -->
+			      </ul>
+
+			      <ul class="nav navbar-nav navbar-right">
+			      	<li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lessons<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">Fundementals</a></li>
+			            <li><a href="#">Robot Car</a></li>
+			            <li><a href="#">Self Driving Car</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">Coming Soon...</a></li>
+			          </ul>
+			        </li>
+			      	<li><a href="#">Resource</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li>
+			            	<%= link_to "What We Offer", about_what_we_offer_path %>
+			            </li>
+			            <li>
+			            	<%= link_to "Who We Are", about_who_we_are_path %>
+			            </li>
+			            <li>
+			            <%= link_to "In The News", about_in_the_news_path %>
+			            </li>
+			          </ul>
+			        </li>
+			        <li><%= link_to "Contact", contact_index_path %></li>
+
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
 
     <%= yield %>
-
-
-
-
-    <!-- Footer -->
-    <div class="footer">
-	    <div class="container">
-	    	<div class="row">
-		    	<div class="col-sm-4 col-md-4 col-xl-4">
-	    		<div class="connect-with-us">Connect With Us</div>
-						<!-- Add font awesome icons -->
-						<i><a href="#" class="fa fa-facebook"></a>
-						</i>
-						<a href="#" class="fa fa-instagram social-icon"></a>
-						<a href="#" class="fa fa-twitter social-icon"></a>	
-					</div>
-
-					<div class="col-sm-4 col-md-4 col-xl-4 news-letter-text">
-						Sign Up News letter
-						<form class="form-horizontal">
-						  <div class="form-group">
-						    <div class="col-sm-12">
-						      <input type="text" class="form-control" id="email" placeholder="Enter name">
-						    </div>
-						  </div>
-						  <div class="form-group">
-						    <div class="col-sm-12"> 
-						      <input type="email" class="form-control" id="pwd" placeholder="Enter email">
-						    </div>
-						  </div>
-						  <div class="form-group"> 
-						    <div class="col-sm-offset-2 col-sm-8">
-						      <button type="submit" class="btn btn-default">Subscribe</button>
-						    </div>
-						  </div>
-						</form>
-					</div>
-
-					<div class="col-sm-4 col-md-4 col-xl-4">
-					<ul class="col-sm-6 footer-info">
-						<li>Github</li>
-						<li>FAQ</li>
-						<li>Contact</li>
-					</ul>
-					<ul class="col-sm-6 footer-info">
-						<li>What We Offer</li>
-						<li>Who We Are</li>
-						<li>In the news</li>
-					</ul>
-					</div>
-				</div>
-	    </div>
-    </div> <!-- End of Footer -->
 
   </body>
 </html>

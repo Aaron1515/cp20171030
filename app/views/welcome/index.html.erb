@@ -21,7 +21,7 @@
 			<p>Difficulty: Beginner</p>
 			<p>Objective: Introduce computer science fundamentals to students with no background in computer science through engaging activey-base modules with Rasberry Pi</p>
 			<p>Time: 1 day to 1 week</p>
-			<button class="btn btn-primary">GO TO LESSON</button>
+			<%= link_to "GO TO LESSON", lesson_fundamental_path, class: 'btn btn-primary' %>
 		</div>	
 	</div>
 </div>
@@ -36,7 +36,7 @@
 			<p>Difficulty: Intermediate</p>
 			<p>Objective: Students will achieve a basic understanding of the fundamentals of robotics by observing how computer commands translate into physical movement using Python</p>
 			<p>Time: 1 weeks to 4 weeks</p>
-			<button class="btn btn-primary">GO TO LESSON</button>
+			<%= link_to "GO TO LESSON", lesson_robot_car_path, class: 'btn btn-primary' %>
 		</div>	
 
 		<div class="col-sm-6 col-md-6 col-lg-4">
@@ -58,10 +58,59 @@
 			<p>Difficulty: Advanced</p>
 			<p>Objective: Build upon the Robot Car Lesson and add additional code to make the Robot Car autonomus.  Students will solidify their understading of Python</p>
 			<p>Time: 2 weeks to 8 weeks</p>
-			<button class="btn btn-primary">GO TO LESSON</button>
-		</div>	
+			<%= link_to "GO TO LESSON", lesson_self_driving_car_path, class: 'btn btn-primary' %>		</div>	
 	</div>
 </div>
 
 <br>
 <br>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="container">
+  	<div class="row">
+    	<div class="col-sm-4 col-md-4 col-xl-4">
+  		<div class="connect-with-us">Connect With Us</div>
+				<!-- Add font awesome icons -->
+				<i><a href="#" class="fa fa-facebook"></a>
+				</i>
+				<a href="#" class="fa fa-instagram social-icon"></a>
+				<a href="#" class="fa fa-twitter social-icon"></a>	
+			</div>
+
+			<div class="col-sm-4 col-md-4 col-xl-4 news-letter-text">
+				Sign Up News letter
+				<form class="form-horizontal">
+				  <div class="form-group">
+				    <div class="col-sm-12">
+				      <input type="text" class="form-control" id="email" placeholder="Enter name">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-12"> 
+				      <input type="email" class="form-control" id="pwd" placeholder="Enter email">
+				    </div>
+				  </div>
+				  <div class="form-group"> 
+				    <div class="col-sm-offset-2 col-sm-8">
+				      <button type="submit" class="btn btn-default">Subscribe</button>
+				    </div>
+				  </div>
+				</form>
+			</div>
+
+			<div class="col-sm-4 col-md-4 col-xl-4">
+			<ul class="col-sm-6 footer-info">
+				<li>Github</li>
+				<li>FAQ</li>
+				<li>Contact</li>
+			</ul>
+			<ul class="col-sm-6 footer-info">
+				<li>What We Offer</li>
+				<li>Who We Are</li>
+				<li>In the news</li>
+			</ul>
+			</div>
+		</div>
+  </div>
+</div> <!-- End of Footer -->

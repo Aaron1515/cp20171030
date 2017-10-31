@@ -38,6 +38,8 @@ Site map
 ![site map image](planning/site_map_01.png "Site Map v.01")
 
 
-Prototype
+Prototype Site
+[Prototype Link](https://curricupi.herokuapp.com/)
 
+Example
 [Prototype Link](https://projects.invisionapp.com/share/KBDYHVQC9#/screens/258391130)

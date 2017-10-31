@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'resource/index'
+
   get 'lesson/index'
 
   get 'welcome/index'

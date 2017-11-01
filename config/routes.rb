@@ -12,8 +12,9 @@ Rails.application.routes.draw do
 
   get 'lesson/index'
   get 'lesson/fundamental'
-  get 'lesson/robot_car'
   get 'lesson/self_driving_car'
+  get 'lesson/robot_car'
+  get 'lesson/robot_car_h_bridge'
 
   root 'welcome#index'
 

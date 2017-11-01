@@ -17,8 +17,8 @@
 <br>
 
 <!-- Modules -->
-<div class="container">
-	<div class="lesson-box-dark-blue">
+<div class="custom-container">
+	<div class="third-lesson-box">
 		<div class="white">
 		<h2 class='lesson-title white'>Learning Goals</h2>
 		<p><span>logo here</span>something</p>
@@ -72,38 +72,108 @@
 	<h2>Setup</h2>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+	  </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= link_to image_tag("300.png")%>
-    </div>
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner">
+	    <div class="item active">
+	      <%= link_to image_tag("300.png")%>
+	    </div>
 
-    <div class="item">
-      <%= link_to image_tag("300.png")%>
-    </div>
+	    <div class="item">
+	      <%= link_to image_tag("300.png")%>
+	    </div>
 
-    <div class="item">
-      <%= link_to image_tag("300.png")%>
-    </div>
-  </div>
+	    <div class="item">
+	      <%= link_to image_tag("300.png")%>
+	    </div>
+	  </div>
 
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
+	  <!-- Left and right controls -->
+	  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
 </div>
-	
+
+<br>
+<br>
+<br>
+
+
+<!-- Lesson Box -->
+<div class="custom-container">
+	<div class="primary-lesson-box">
+		<div class="gray">
+		<h1 class='lesson-title center gray'>Before starting the excercises</h1>
+		<p><i class="fa fa-cogs" aria-hidden="true"></i> Make sure to connect your wheel</p>
+		<p><i class="fa fa-hdd-o" aria-hidden="true"></i> Check the Robot Car Python excercise files copied into your RaspberryPi&trade; MicroSD Card</p>
+		</div>
+	</div>
 </div>
+
+<br>
+<br>
+
+<!-- Lesson Box Prime-->
+<div class="custom-container gray">
+	<h1>Excercises</h1>
+</div>
+
+<div class="custom-container gray">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Excercise 1: Control Motor to spin wheel clockwise</h2>
+			<p>1. Connect the Raspberry Pi&trade; to the external battery.</p>
+			<p>2. Use VNC Viewer to SSH into your Raspberry Pi&trade; and access the terminal.</p>
+			<p>3. Open file motor_ex1.py by using the command sudo nano motor_ex1.py</p>
+			<p>4. Set the outputs for each GPIO pin by following the directions in the file in red. Refer to the truth table in the lesson above (the first row) to turn the wheel clockwise. For a refresher on how to set your GPIO pins True or False, refer to Module 1 of the Base Curriculum. Check with the instructor at this step.</p>
+			<p>5. Save and execute your python code. Your wheel should spin clockwise for 5 seconds.</p>
+		</div>
+	</div>
+</div>
+
+
+<br>
+<br>
+
+<!-- Lesson Box Prime-->
+<div class="custom-container">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Exercise 2: Control motor to spin wheel counter-clockwise.</h2>
+			<p>1. Open file motor_ex2.py by using the command sudo nano motor_ex2.py</p>
+			<p>2. Set the outputs for each GPIO pin by following the directions in the file in red. Refer to the truth table above, specifically the first two rows.</p>
+			<p>3. Save and execute your python code. Your wheel should spin counter-clockwise for 5 seconds.</p>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+<!-- Lesson Box Prime-->
+<div class="custom-container">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Exercise 3: Control motor to spin wheel clockwise, and then counter-clockwise.</h2>
+			<p>1. Open file motor_ex3.py by using the command sudo nano motor_ex3.py</p>
+			<p>2. Set the outputs for each GPIO pin by following the directions in the file in red. Refer to the truth table above. Remember to use the time.sleep() function at the end of each GPIO pin set.</p>
+			<p>3. Save and execute your python code. Your wheel should spin clockwise for 5 seconds and then counter-clockwise for 5 seconds.</p>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
 
 

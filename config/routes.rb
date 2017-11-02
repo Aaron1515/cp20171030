@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'lesson/self_driving_car'
   get 'lesson/robot_car'
   get 'lesson/robot_car_h_bridge'
+  get 'lesson/robot_car_motor'
 
   root 'welcome#index'
 

@@ -15,6 +15,10 @@ class LessonController < ApplicationController
   def robot_car_motor
   end
 
+  def robot_car_define_function
+    
+  end
+
   def self_driving_car
   end
 end

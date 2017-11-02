@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'lesson/robot_car'
   get 'lesson/robot_car_h_bridge'
   get 'lesson/robot_car_motor'
+  get 'lesson/robot_car_define_function'
 
   root 'welcome#index'
 

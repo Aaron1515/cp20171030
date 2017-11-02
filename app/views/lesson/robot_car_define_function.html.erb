@@ -1,0 +1,167 @@
+<!-- Bread Crumb -->
+<ul class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li>Lessons</li>
+  <li><%= link_to "Robot Car", lesson_robot_car_path%></li>
+  <li>Module 3 - Defining Functions</li>
+</ul>
+<!-- End of Bread Crumb -->
+
+
+<!-- Title -->
+<div class="container gray">
+	<div class="center">
+		<h1>Definding Functions</h1>
+	</div>
+</div>
+<!-- End of Title -->
+
+<br>
+<br>
+<br>
+
+<!-- Modules -->
+<div class="custom-container">
+	<div class="third-lesson-box">
+		<div class="white">
+		<h2 class='lesson-title white'>Learning Goal</h2>
+		<p><span></span>Learn how to define functions using Python. Learn how to create functions for directional movement of the robot car.</p>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<!-- Lesson Box -->
+<div class="custom-container">
+	<div class="primary-lesson-box">
+		<div class="gray">
+			<h1 class='lesson-title center gray'>Lesson & Syntax</h1>
+			<p>Suppose you want to define a function that adds 10 to a number (let’s call this variable x) and prints the result. The syntax to define this function is as follows:</p>
+			<p>The function can then be used later in the code. For example, to print the result of 5+10, you would write:</p>
+			<p>Your code will print 15 when run.</p>
+		</div>
+		<div></div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<!-- Setup -->
+
+<div class="custom-container gray">
+	<h1>Setup</h1>
+</div>
+
+<!-- Step 1 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 1: Labeling</h2>
+			<p>Label each moter to keep orginized for later steps.</p>
+			<div><%= image_tag ("label_motor.png") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+<!-- Step 2 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 2: Connecting motor</h2>
+			<p>Take motor “A” and thread the black wire through the lead on top, and the red wire through the copper lead (the small metal loops) on the bottom (as oriented in the picture below).</p>
+			<div><%= image_tag ("motor_connect_1.png") %><%= image_tag ("motor_connect_2.jpg") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+<!-- Step 3 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 3: Wrappring the leads</h2>
+			<p>Wrap the leads with electrical tape to secure the wires and connection to the leads.</p>
+			<div><%= image_tag ("300.png") %></div>
+		</div>
+	</div>
+</div>
+
+
+<!-- End of setup -->
+
+<br>
+<br>
+<br>
+
+<!-- Lesson Box Prime-->
+<div class="custom-container gray">
+	<h1>Excercises</h1>
+</div>
+
+<div class="custom-container gray">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Excercise 1: Define functions for moving the car forward and backward.</h2>
+			<p>1. Connect the Raspberry Pi&trade; to the external battery.</p>
+			<p>2. Use SecureShell to SSH into your Raspberry Pi&trade; to access its terminal (see steps XX)</p>
+			<p>3. Open file <code>carfunctions.py</code> by using the command <code>sudo nano carfunctions.py</code></p>
+			<p>4. Follow the instructions in red for “Exercise 1”. Refer to the Lesson & Syntax section if necessary.</p>
+			<p>5. Save and exit the <code>carfunctions.py</code> file.</p>
+			<p>6. Open file robot.py by using the command <code>sudo nano robot.py</code></p>
+			<p>Follow the directions in red to call your functions.</p>
+			<p>Save and execute your code.</p>
+		</div>
+	</div>
+</div>
+
+
+<br>
+<br>
+
+<!-- Lesson Box Prime-->
+<div class="custom-container">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Exercise 2: CDefine functions for moving the car left and right.</h2>
+			<p>1. Open file <code>carfunctions.py</code> by using the command <code>sudo nano carfunctions.py</code></p>
+			<p>2. Follow the instructions in red for “Exercise 2”. Refer to the Lesson & Syntax section if necessary.</p>
+			<p>3. Save and exit the <code>carfunctions.py</code> file.</p>
+			<p>4. Open file robot.py by using the command sudo nano <code>robot.py</code></p>
+			<p>5. Type in the commands to have the car move forwards, turn left, move forward, turn right, and move forward.</p>
+			<p>6. Save and execute your code.</p>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+
+<!-- Lesson Box -->
+<div class="custom-container">
+	<div class="primary-lesson-box">
+		<div class="gray">
+		<h1 class='lesson-title center gray'>Time to celebrate.</h1>
+		<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Pat yourself on the back, give a classmate a high five!</p>
+		<p><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Check with the instructor you're good to proceed.</p>
+		</div>
+		<div class="center">
+			<%= link_to "Back to module 2", lesson_robot_car_motor_path, class:"btn btn-primary" %>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+

@@ -29,60 +29,6 @@
 	</div>
 </div>
 
-<br>
-<br>
-
-<div class="custom-container gray">
-	<h2>OVERVIEW</h2>
-	<div class="row">
-	  <div class="col-md-4">
-	  <%= link_to image_tag "hbridge.png", class:"image-300" %>
-
-	  </div>
-	  <div class="col-md-8">
-	  	<div class="concept">
-	  		
-	  	<h4 class="gray center">
-	  		<span></span>KEY CONCEPTS</h4>
-				<div class="row">
-					<div class="col-sm-4 center">
-						Truth Table
-					</div>
-					<div class="col-sm-4 center">
-						H-Bridge
-					</div>
-					<div class="col-sm-4 center">
-						Eletric Polarity
-					</div>
-	  		</div>
-	  	</div>
-	  		<p>In this project, we will be using <span class="color-primary"><b>DC motors</b></span>. Each motor is made up of a number of inductors, which move in a magnetic field. For our purposes, the function of the motors is to convert electrical energy into mechanical energy. The mechanical energy translates to the rotation of the wheels in your robot car. The speed of the rotation is proportional to the amount of current flowing through them, and in this project, we’ll be keeping the current constant, so the car would only be able to travel at a single speed.</p>
-	  		<p>When a DC motor is hooked up to (+) wire on one lead and (-) wire on the other lead, the motor rotates a certain direction. When you switch the wires, the motor rotates in the opposite direction. In order to control the switching of “electric polarity” so the car is capable of moving forward and backward, the motors need to be connected to a motor controller called the H-Bridge.</p>
-	  		<p>The H-Bridge acts as the interface between the motors and your Raspberry Pi. It has four inputs (I1, I2, I3, and I4) and four outputs (O1, O2, O3, and O4). The inputs will connect to the Raspberry Pi GPIO pins, which the user can designate as True or False. The output ports will take in the motor leads, and send power to the motor as controlled by the<span class="color-primary"><b> GPIO Pins</b></span>.</p>
-	  		<p><b>In this module, we will connect the motor, H-Bridge, and Raspberry Pi&trade; to correspond to the following <span class="color-third"><b> truth table</b></span>.</p>
-	  		<div class="center">
-					<div class="btn btn-primary">Open Truth Table</div>
-	  		</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<br>
-<br>
-
-
-<!-- Lesson Box -->
-<div class="custom-container">
-	<div class="primary-lesson-box">
-		<div class="gray">
-		<h1 class='lesson-title center gray'>Before starting the excercises</h1>
-		<p><i class="fa fa-cogs" aria-hidden="true"></i> Make sure to connect your wheel</p>
-		<p><i class="fa fa-hdd-o" aria-hidden="true"></i> Check the Robot Car Python excercise files copied into your RaspberryPi&trade; MicroSD Card</p>
-		</div>
-	</div>
-</div>
 
 <br>
 <br>
@@ -97,7 +43,7 @@
 <div class="custom-container gray">
 	<div class="forth-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Step 1: </h2>
+			<h2 class="lesson-title gray">Step 1: </h2>
 			<p>Detach most wires from H-Bridge & RaspberryPi&trade;. Secure all motors onto the car chassis, & place top chassis on and arrange wires through the holes appropriately.</p>
 			<ol>
 				<li>Now that the H-Bridge is confirmed to be working properly, detach all wires EXCEPT the ones attached to the motor with the electrical tape on it.</li>
@@ -117,9 +63,20 @@
 <div class="custom-container gray">
 	<div class="forth-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Step 2: Attach wires from motor to appropriate outputs on H-Bridge. (Explain how each set of outputs controls both motors)</h2>
-			<p>Take motor “A” and thread the black wire through the lead on top, and the red wire through the copper lead (the small metal loops) on the bottom (as oriented in the picture below).</p>
-			<div><%= image_tag ("motor_connect_1.png") %><%= image_tag ("motor_connect_2.jpg") %></div>
+			<h2 class="lesson-title gray">Step 2: </h2>
+			<p>Attach wires from motor to appropriate outputs on H-Bridge. (Explain how each set of outputs controls both motors)</p>
+			<p>To keep this project more simplistic, each pair of motors on each side of the car will share the same output ports on the H-Bridge and therefore receive the same signals from the Raspberry PiTM. However, because the motors are oriented to “face” each other on each side, the wires must be placed into the ports in an alternating manner to ensure that each pair of wheels will spin in the same direction. In addition, the H-Bridge should end up in the middle of all the motors as shown in the image below:</p>
+			<div><%= image_tag ("motor5.jpg") %></div>
+			<ol>
+			<p>Left-side pair:</p>
+				<li>Twist the black wire from Motor A and red wire from Motor B together, and insert the intertwined wires into Output 1 on the H-Bridge.</li>
+				<li>Twist the red wire from Motor A and black wire from Motor B together, and insert the intertwined wires into Output 2 on the H-Bridge.</li>
+			<p>Right-side pair:</p>
+				<li>Twist the black wire from Motor C and red wire from Motor D together, and insert the intertwined wires into Output 3 on the H-Bridge.</li>
+				<li>Twist the red wire from Motor C and the black wire from Motor D together, and insert the intertwined wires into Output 4 on the H-Bridge.</li>
+			</ol>
+			<p>After the connections are complete, the resulting motors-to-H-Bridge set up should match the layout shown below:</p>
+			<div><%= image_tag ("motor6.png") %></div>
 		</div>
 	</div>
 </div>
@@ -130,9 +87,22 @@
 <div class="custom-container gray">
 	<div class="forth-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Step 3: Wrappring the leads</h2>
-			<p>Wrap the leads with electrical tape to secure the wires and connection to the leads.</p>
-			<div><%= image_tag ("300.png") %></div>
+			<h2 class="lesson-title gray">Step 3:</h2>
+			<p>Connect H-Bridge inputs to the appropriate GPIO pins on the Pi via female to male wires</p>
+			<p>First, set up the top chassis piece by taping the battery pack down on it. Thread the wires from the battery pack through the large hole toward the end of the chassis piece.</p>
+			<p>Tape your Raspberry Pi&trade; down the top chassis piece as well, on the other end since the battery pack will be on one end. Take four female-to-female wires and connect them to GPIO Pins #11, #13, #15, and #18. Then take two male-to-female wires and attach them to GPIO Pins #2 and #6. Take the ends (which shouldn’t be attached to anything) and thread them down the large hole toward the end of the chassis piece closest to the Raspberry Pi&trade;.</p>
+			<p>Now take the unconnected ends of the four female-to-female wires, and connect the H-Bridge inputs to the GPIO pins on the Raspberry PiTM as follows:</p>
+			<p>Input 1 –> GPIO Pin #11</p>
+			<p>Input 2 –> GPIO Pin #13</p>
+			<p>Input 3 –> GPIO Pin #15</p>
+			<p>Input 4 –> GPIO Pin #18</p>
+			<p>Then take the unconnected ends of the two male-to-female wires (should be the male ends) and connect them to the H-Bridge inputs as follows:</p>
+			<p>5V –> GPIO PIN #2</p>
+			<p>GND –> GPIO PIN #6</p>
+			<p>Refer to the diagram below for diagram of the complete connections.</p>
+			<div><%= image_tag ("motor7.png") %></div>
+			<p>The car should look like this at this point:</p>
+			<div><%= image_tag ("motor8.jpg") %></div>
 		</div>
 	</div>
 </div>
@@ -143,143 +113,19 @@
 <div class="custom-container gray">
 	<div class="forth-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Step 4: Connecting to the H-Bridge</h2>
-			<p>Attach your motor to the H-Bridge by inserting the black wire into the Output 1 port and the red wire into the Output 2 port, as shown in the diagram below. In order to insert the wires into the ports, use a [small] screwdriver to loosen the bolts above each port, insert the exposed wire into the port, and then screw the bolt back down tightly.</p>
-			<div><%= image_tag ("hbridge_motor.png") %></div>
+			<h2 class="lesson-title gray">Step 4: </h2>
+			<p>Complete building of car. Connect Raspberry PiTM to portable charger, which should turn on the Raspberry PiTM. Connect the battery pack to the H-Bridge as in Step 2A. Place batteries into the battery pack. Now the H-Bridge should turn on as well.</p>
+			<p>Use bronze rods to attach the top chassis, which holds the Raspberry PiTM and battery pack, to the bottom chassis, which holds the H-bridge and motors. Secure the rods using screws on both chasses.</p>
+			<div><%= image_tag ("motor9.jpg") %></div>
+			<p>Attach all four wheels to the car.</p>
+			<p>Connect the RPi to the portable charger via the MicroUSB cord. This should automatically turn on the RPi, as designated by the green light and flashing red light. Place the 4 AA batteries into the battery pack, which should turn on the H-Bridge, designated by the red light.</p>
 		</div>
 	</div>
 </div>
 
 <br>
-
-<!-- Step 5 -->
-<div class="custom-container gray">
-	<div class="forth-lesson-box">
-		<div class="gray">
-			<h2 class='lesson-title gray'>Step 5: Connecting battery pack</h2>
-			<p>Take the red wire from the battery pack that came in the chassis kit and insert it into the 12V port (motor power supply) on the H-Bridge. This will allow sufficient power to be drawn from the batteries to power the motors when the Raspberry PiTM signals for it.</p>
-			<div><%= image_tag ("hbridge_batterypack.jpg") %></div>
-		</div>
-	</div>
-</div>
-
-<br>
-
-<!-- Step 6 -->
-<div class="custom-container gray">
-	<div class="forth-lesson-box">
-		<div class="gray">
-			<h2 class='lesson-title gray'>Step 6:</h2>
-			<p>Next, the ground on the Raspberry Pi&trade; and the ground on the H-Bridge need to be connected. Take a black male-to-female wire and insert the female end into GPIO Pin #6 (which represents ground). Take the black wire from the battery pack and wrap it around the male end of the wire that is connected to the RPi, and insert both into the GND port of the H-Bridge. Take a male-to-female wire and insert the female end into GPIO Pin #2 (DC Power 5V output) and insert the male end into the 5V port on the H-Bridge.</p>
-			<div><%= image_tag ("300.png") %></div>
-		</div>
-	</div>
-</div>
-
-<br>
-
-<!-- Step 7 -->
-<div class="custom-container gray">
-	<div class="forth-lesson-box">
-		<div class="gray">
-			<h2 class='lesson-title gray'>Step 7: </h2>
-			<p>*Take two female-to-female wires, and connect the H-Bridge inputs to the GPIO pins on the RaspberryPi&trade; as follows:</p>
-			<ul>
-				<li>Wire from Input 1 to GPIO Pin #11</li>
-				<li>Wire from Input 2 to GPIO Pin #13</li>
-			</ul>
-			<div><%= image_tag ("300.png") %></div>
-		</div>
-	</div>
-</div>
-
-<br>
-
-<!-- Step 8 -->
-<div class="custom-container gray">
-	<div class="forth-lesson-box">
-		<div class="gray">
-			<h2 class='lesson-title gray'>Step 8: Wheels on the ....</h2>
-			<p>Attack the tires & wheel to the motor</p>
-			<div><%= image_tag ("300.png") %></div>
-		</div>
-	</div>
-</div>
-
-<br>
-
-<!-- Step 9 -->
-<div class="custom-container gray">
-	<div class="forth-lesson-box">
-		<div class="gray">
-			<h2 class='lesson-title gray'>Step 9: Finish Built</h2>
-			<p>The connections should follow the diagram below</p>
-			<div><%= image_tag ("robotcar_single_wheel.png") %><%= image_tag ("robotcar_single_wheel2.jpg") %></div>
-			<p>Make sure to connect your wheel before beginning your exercises.</p>
-		</div>
-	</div>
-</div>
-
-<br>
-
-
 
 <!-- End of setup -->
-
-<br>
-<br>
-
-<!-- Lesson Box Prime-->
-<div class="custom-container gray">
-	<h1>Excercises</h1>
-</div>
-
-<div class="custom-container gray">
-	<div class="second-lesson-box">
-		<div class="gray">
-			<h2 class='lesson-title gray'>Excercise 1: Control Motor to spin wheel clockwise</h2>
-			<p>1. Connect the Raspberry Pi&trade; to the external battery.</p>
-			<p>2. Use VNC Viewer to SSH into your Raspberry Pi&trade; and access the terminal.</p>
-			<p>3. Open file motor_ex1.py by using the command sudo nano motor_ex1.py</p>
-			<p>4. Set the outputs for each GPIO pin by following the directions in the file in red. Refer to the truth table in the lesson above (the first row) to turn the wheel clockwise. For a refresher on how to set your GPIO pins True or False, refer to Module 1 of the Base Curriculum. Check with the instructor at this step.</p>
-			<p>5. Save and execute your python code. Your wheel should spin clockwise for 5 seconds.</p>
-		</div>
-	</div>
-</div>
-
-
-<br>
-<br>
-
-<!-- Lesson Box Prime-->
-<div class="custom-container">
-	<div class="second-lesson-box">
-		<div class="gray">
-			<h2 class='lesson-title gray'>Exercise 2: Control motor to spin wheel counter-clockwise.</h2>
-			<p>1. Open file motor_ex2.py by using the command sudo nano motor_ex2.py</p>
-			<p>2. Set the outputs for each GPIO pin by following the directions in the file in red. Refer to the truth table above, specifically the first two rows.</p>
-			<p>3. Save and execute your python code. Your wheel should spin counter-clockwise for 5 seconds.</p>
-		</div>
-	</div>
-</div>
-
-<br>
-<br>
-
-<!-- Lesson Box Prime-->
-<div class="custom-container">
-	<div class="second-lesson-box">
-		<div class="gray">
-			<h2 class='lesson-title gray'>Exercise 3: Control motor to spin wheel clockwise, and then counter-clockwise.</h2>
-			<p>1. Open file motor_ex3.py by using the command sudo nano motor_ex3.py</p>
-			<p>2. Set the outputs for each GPIO pin by following the directions in the file in red. Refer to the truth table above. Remember to use the time.sleep() function at the end of each GPIO pin set.</p>
-			<p>3. Save and execute your python code. Your wheel should spin clockwise for 5 seconds and then counter-clockwise for 5 seconds.</p>
-		</div>
-	</div>
-</div>
-
-<br>
-<br>
 
 
 <!-- Lesson Box -->
@@ -291,12 +137,12 @@
 		<p><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Check with the instructor you're good to proceed.</p>
 		</div>
 		<div class="center">
-			<div class="btn btn-primary">Go to module 2</div></p>
+			<div class="btn btn-primary">Go to module 3</div></p>
 		</div>
 	</div>
 </div>
+<!-- Lesson Box -->
 
 <br>
 <br>
-
 

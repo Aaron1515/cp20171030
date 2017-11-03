@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'about/what_we_offer'
   get 'about/who_we_are'
-  get	'about/in_the_news'
+  get	'about/faq'
 
   get 'lesson/index'
   get 'lesson/fundamental'

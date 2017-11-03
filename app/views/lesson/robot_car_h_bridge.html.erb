@@ -130,6 +130,141 @@
 <br>
 <br>
 
+<!-- Setup -->
+
+<div class="custom-container gray">
+	<h1>Setup</h1>
+</div>
+
+<!-- Step 1 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 1: Labeling</h2>
+			<p>Label each moter to keep orginized for later steps.</p>
+			<div><%= image_tag ("label_motor.png") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Step 2 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 2: Connecting motor</h2>
+			<p>Take motor “A” and thread the black wire through the lead on top, and the red wire through the copper lead (the small metal loops) on the bottom (as oriented in the picture below).</p>
+			<div><%= image_tag ("motor_connect_1.png") %><%= image_tag ("motor_connect_2.jpg") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Step 3 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 3: Wrappring the leads</h2>
+			<p>Wrap the leads with electrical tape to secure the wires and connection to the leads.</p>
+			<div><%= image_tag ("300.png") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Step 4 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 4: Connecting to the H-Bridge</h2>
+			<p>Attach your motor to the H-Bridge by inserting the black wire into the Output 1 port and the red wire into the Output 2 port, as shown in the diagram below. In order to insert the wires into the ports, use a [small] screwdriver to loosen the bolts above each port, insert the exposed wire into the port, and then screw the bolt back down tightly.</p>
+			<div><%= image_tag ("hbridge_motor.png") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Step 5 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 5: Connecting battery pack</h2>
+			<p>Take the red wire from the battery pack that came in the chassis kit and insert it into the 12V port (motor power supply) on the H-Bridge. This will allow sufficient power to be drawn from the batteries to power the motors when the Raspberry PiTM signals for it.</p>
+			<div><%= image_tag ("hbridge_batterypack.jpg") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Step 6 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 6:</h2>
+			<p>Next, the ground on the Raspberry Pi&trade; and the ground on the H-Bridge need to be connected. Take a black male-to-female wire and insert the female end into GPIO Pin #6 (which represents ground). Take the black wire from the battery pack and wrap it around the male end of the wire that is connected to the RPi, and insert both into the GND port of the H-Bridge. Take a male-to-female wire and insert the female end into GPIO Pin #2 (DC Power 5V output) and insert the male end into the 5V port on the H-Bridge.</p>
+			<div><%= image_tag ("300.png") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Step 7 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 7: </h2>
+			<p>*Take two female-to-female wires, and connect the H-Bridge inputs to the GPIO pins on the RaspberryPi&trade; as follows:</p>
+			<ul>
+				<li>Wire from Input 1 to GPIO Pin #11</li>
+				<li>Wire from Input 2 to GPIO Pin #13</li>
+			</ul>
+			<div><%= image_tag ("300.png") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Step 8 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 8: Wheels on the ....</h2>
+			<p>Attack the tires & wheel to the motor</p>
+			<div><%= image_tag ("300.png") %></div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Step 9 -->
+<div class="custom-container gray">
+	<div class="forth-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Step 9: Finish Built</h2>
+			<p>The connections should follow the diagram below</p>
+			<div><%= image_tag ("robotcar_single_wheel.png") %><%= image_tag ("robotcar_single_wheel2.jpg") %></div>
+			<p>Make sure to connect your wheel before beginning your exercises.</p>
+		</div>
+	</div>
+</div>
+
+<br>
+
+
+
+<!-- End of setup -->
+
+<br>
+<br>
+
 <!-- Lesson Box Prime-->
 <div class="custom-container gray">
 	<h1>Excercises</h1>
@@ -192,7 +327,8 @@
 		<p><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Check with the instructor you're good to proceed.</p>
 		</div>
 		<div class="center">
-			<div class="btn btn-primary">Go to module 2</div></p>
+			<%= link_to "< Back to Robot Car", lesson_robot_car_path, class:"btn btn-primary" %>
+			<%= link_to "Go to module 2 >", lesson_robot_car_motor_path, class:"btn btn-primary" %>
 		</div>
 	</div>
 </div>

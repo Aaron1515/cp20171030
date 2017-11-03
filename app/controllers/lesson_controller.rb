@@ -6,6 +6,21 @@ class LessonController < ApplicationController
   def fundamental
   end
 
+  def fundamental_gpio
+  end
+
+  def fundamental_loops
+  end
+
+  def fundamental_comparison
+  end
+
+  def fundamental_conditional
+  end
+
+  def fundamental_logic
+  end
+
   def robot_car
   end
 

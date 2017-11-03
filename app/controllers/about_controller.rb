@@ -8,7 +8,6 @@ class AboutController < ApplicationController
 
 	end
 
-	def in_the_news
-		
+	def faq
 	end
 end

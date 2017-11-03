@@ -10,7 +10,13 @@ class LessonController < ApplicationController
   end
 
   def robot_car_h_bridge
-  	
+  end
+
+  def robot_car_motor
+  end
+
+  def robot_car_define_function
+    
   end
 
   def self_driving_car

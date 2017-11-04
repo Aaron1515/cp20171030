@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= favicon_link_tag 'icon.ico' %>
 
   </head>
 
@@ -27,7 +28,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <%= link_to "Logo Here", root_path, class: 'navbar-brand' %>
+		      <%= link_to image_tag "Logo Here", root_path, class: 'navbar-brand' %>
 		      </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->

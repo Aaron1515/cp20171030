@@ -77,12 +77,12 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 1: Have an LED light five times</h2>
 			<p>1. Set up the breadboard the same as Module 1, Exercise 2</p>
+			<p>2. Open nano file <code>ex2_1.py</code></p>
+			<p>3. Follow the directions in red. Note, you will need a <code>time.sleep(1)</code> function in there. This command tells the computer how long to wait before excuting the next line of code.</p>
+			<div><%= image_tag ("loops1.png")%></div>
+			<p>The following example code keeps the LED light connected to GPIO Pin 11 on for 3 second then it will disconnect and turn off the lights:</p>
+			<p><pre class="image-300" style="margin-left: 20px">GPIO.output(11, GPIO.HIGH)<br />time.sleep(3)<br />GPIO.output(11, GPIO.LOW)</pre></p>
 		</div>
-		<div>
-			<div><%= image_tag ("gpio1.png")%></div>
-		</div>
-		<p>2. Plug in male end of the wires to bread board. Set up LED light and resistor (220 ohms) on bread board.</p>
-		<div><div><%= image_tag ("gpio2.png")%></div></div></div>
 	</div>
 </div>
 
@@ -94,15 +94,11 @@
 <div class="custom-container">
 	<div class="second-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Exercise 2: Turn LED light on with GPIO pin 11</h2>
-			<p>1. Open the Raspberry Pi&trade; terminal.</p>
-			<p>2. Open nano file <code>ex1_2.py</code> by typing <code>sudo nano ex1_2.py</code> in the terminal.</p>
-			<p>3. Set up bread board the same way as exercise 1, except move male-to-female wire from GPIO Pin 2 to GPIO Pin 11.</p>
-			<div><div><%= image_tag ("gpio3.png")%></div></div>
-			<p>4. Read directions in red and complete the exercise. Refer to the Module 1 Lesson & Syntax to know what syntax to use.</p>
-			<p>5. Save and exit your nano file by using CTRL+X, then type “y”, and hit enter.</p>
-			<p>6. Execute the python code by typing <code>sudo python ex1_2.py</code></p>
-			<p>7. Look at the GPIO pin layout diagram. Do you think you can use a different GPIO pin? If you think you can, adjust the wiring and your code and see if you can still turn on the light.</p>
+			<h2 class='lesson-title gray'>Exercise 2: Have one LED light blink quickly first, and one LED light blink slowly after.</h2>
+			<p>1. Set up the breadboard the same way as Module 1, Exercise 3. You will need to use GPIO 11 and GPIO 13.</p>
+			<p>2. Open nano file <code>ex2_2a.py</code></p>
+			<p>3. Follow the directions in red. Note to use two for loops. Refer to the Lesson & Syntax for the syntax for the for loops. Use the <code>time.sleep(number)</code> command as you did before.</p>
+			<div><%= image_tag ("loops2.png")%></div>
 		</div>
 	</div>
 </div>
@@ -114,27 +110,20 @@
 <div class="custom-container">
 	<div class="second-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Exercise 3: Toggle one LED light on and one LED light off with different GPIO Pins, using GPIO Pin 11 and GPIO Pin 13.</h2>
-			<p>Set up bread board the same way as in Module 1 Exercise 2. Then add another resistor and LED light to the bread board. Then add another male to female wire from GPIO Pin 13 to the second LED light. Note: Have the same ground with the second resistor</p>
-			<div><div><%= image_tag ("gpio4.png") %></div></div>
-			<p>2. Open nano file <code>ex1_3.py</code></p>
-			<p>3. Read directions in red and complete the exercise. Refer to the Module 1 Lesson & Syntax to know what syntax to use.</p>
-			<p>4. Save and exit your nano file.</p>
-			<p>5. Execute the python code.</p>
-			<p>6. Now open nano file <code>ex1_3.py</code> again and change the code such that the second LED light connected to GPIO Pin 13 is on, and the first LED light connected to GPIO Pin 11 is off, and execute your code.</p>
+			<h2 class='lesson-title gray'>Exercise 3: Have one LED light blink quickly and one LED light blink slowly simultaneously.</h2>
+			<p>Leave the breadboard as is from Module 2, Exercise 2a.</p>
+			<p>Open nano file <code>ex2_2b.py</code></p>
+			<p>Follow the directions in red. Note to use one for loop this time and use the <code>time.sleep(number)</code> command as you did before.</p>
 		</div>
 	</div>
 </div>
 
 <br>
 <br>
+<!-- END of Excercises -->
 
 
-<br>
-<br>
-
-
-<!-- Excecise 3 -->
+<!-- Final -->
 <div class="custom-container">
 	<div class="primary-lesson-box">
 		<div class="gray">
@@ -143,8 +132,8 @@
 		<p><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Check with the instructor you're good to proceed.</p>
 		</div>
 		<div class="center">
-			<%= link_to "< Back to fundamentals", lesson_fundamental_path, class:"btn btn-primary" %>
-			<%= link_to "Go to module 2 >", lesson_fundamental_loops_path, class:"btn btn-primary" %>
+			<%= link_to "< Back to moduel 1", lesson_fundamental_gpio_path, class:"btn btn-primary" %>
+			<%= link_to "Go to module 2 >", lesson_fundamental_comparison_path, class:"btn btn-primary" %>
 		</div>
 	</div>
 </div>

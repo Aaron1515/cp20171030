@@ -1,1 +1,177 @@
-comparison
+<!-- Bread Crumb -->
+<ul class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li>Lessons</li>
+  <li><%= link_to "Fundamentals", lesson_fundamental_path%></li>
+  <li>Module 3 - Comparison</li>
+</ul>
+<!-- End of Bread Crumb -->
+
+
+<!-- Title -->
+<div class="container gray">
+	<div class="center">
+		<h1>COMPARISON OPERATORS AND BOOLEAN LOGIC</h1>
+	</div>
+</div>
+<!-- End of Title -->
+
+<br>
+<br>
+<br>
+
+<!-- Modules -->
+<div class="custom-container">
+	<div class="third-lesson-box">
+		<div class="white">
+		<h2 class='lesson-title white'>Learning Goal</h2>
+		<p><span></span>Learn how Booleans fit as a “conditional” statement and the using comparison operators to make Booleans. Learn how to use while loops.</p>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- Lesson Box -->
+<div class="custom-container">
+	<div class="primary-lesson-box">
+		<div class="gray">
+			<h1 class='lesson-title center gray'>Lesson & Syntax</h1>
+			<p>*Instructor to explain how Booleans fit into conditional statement for the while loop. Explain that a comparison results in a Boolean (either true or false).<p>
+			<p>Syntax for the while loop is as follows:</p>
+			<p><pre class="image-300" style="margin-left: 20px">while [<span class="code">condition</span>]:<br />	[<span class="code">conditional code</span>]</pre></p>
+			<p>For example, the code below will continuously print “Hello!” for as long as 1 == 1 (which is always true).  If the code was to run it will run infinitely.</p>
+			<p><pre class="image-300" style="margin-left: 20px">while 1 == 1:<br />	print “Hello!”</pre></p>
+			<p>If you ran the code above, you will be stuck in an infinite loop.  You could break out of it by pressing <b>CTRL+C</b>.</p>
+		</div>
+	</div>
+</div>
+<br>
+<div class="custom-container">
+	<div class="primary-lesson-box">
+		<div class="gray">
+			<h1 class='lesson-title center gray'>Learning Opportunity</h1>
+			<p><b>What is a boolean?</b> Boolean are True of False objects.  On the above <code>==</code> is used to compare 1 and 1.  They are the same there for the code ran the next code.</p>
+			<p><b>Comparison types: </b>There are may different comparison tools such as the <code><</code>(smaller than), <code>></code>(greater than), <code><=</code>(smaller than or equal to), <code>>=</code>(greater than or equal to), <code>==</code>(equal to) and <code>!=</code>(not equal to).</p>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<!-- Excercises -->
+<div class="custom-container gray">
+	<h1>Excercises</h1>
+</div>
+
+
+<!-- Excercise 1 -->
+<div class="custom-container gray">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Understand the comparison operator ==</h2>
+			<p>1. Set up bread board the same way as in module 1, exercise 2.</p>
+			<div><%= image_tag ("comparison1.png")%></div>
+			<p>2. Open nano file <code>ex3_1.py</code></p>
+			<p>3. Enter a true statement (such as 1+1 == 2) for the while condition. Remember to use the == sign, which is an equal sign for comparisons, whereas the = sign is to assign variables which we will cover in a later exercise</p>
+			<p>4. Run the python code, and your LED light should start blinking if your conditional statement is <b>True</b></p>
+			<p>5. <b>CTRL+C</b> to stop your code</p>
+			<p>6. Run python code <code>cleanup.py</code> to set your GPIO pins back to default state.</p>
+			<p>7. Go back to nano file <code>ex3_1.py</code> and try entering a false statement, such as 1+3 == 2</p>
+			<p>Your light should not turn on, because the while loop will not activate.</p>
+			<p>Try entering other true statements in the condition. Make sure to run the python code cleanup.py to set your GPIO pins back to default state each time.</p>
+		</div>
+	</div>
+</div>
+
+
+<br>
+<br>
+
+<!-- Exercise 2-->
+<div class="custom-container">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Exercise 2: Understand the comparison operator !=</h2>
+			<p>1. Keep bread board set up the same as in Module 3 Exercise 1.</p>
+			<p>2. Open nano file <code>ex3_2.py</code></p>
+			<p>3. See directions in red in the nano file. Enter a true statement using the is not comparison operator, != (Example: 1+3 != 2) for the while condition.</p>
+			<p>4. Run the python code, and your LED light should start blinking if your conditional statement is <b>True</b></p>
+			<p>5. <b>CTRL+C</b> to stop your code</p>
+			<p>6. Run python code <code>cleanup.py</code> to set your GPIO pins back to default state.</p>
+			<p>7. Go back to nano file <code>ex3_2.py</code> and try entering a false statement, such as 1+3 != 4</p>
+			<p>Your light should not turn on, because the while loop will not activate.</p>
+			<p>8. Try entering other true statements, using the != operator in the condition. Make sure to run the python code cleanup.py to set your GPIO pins back to default state each time.</p>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+<!-- Exercise 3-->
+<div class="custom-container">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Exercise 3: Understand the comparison operator > and <</h2>
+			<p>1. Keep bread board set up the same as in Module 3 Exercise 2.</p>
+			<p>2. Open nano file <code>ex3_3.py</code></p>
+			<p>3. See directions in red in the nano file. Enter a true statement using the is greater than comparison operator, > (example: 3 > 2) for the while condition.</p>
+			<p>4. Run the python code, and your LED light should start blinking if your conditional statement is <code>True</code></p>
+			<p>5. <b>CTRL+C</b> to stop your code</p>
+			<p>6. Run python code <code>cleanup.py</code> to set your GPIO pins back to default state.</p>
+			<p>7. Go back to nano file <code>ex3_3.py</code> and try entering a false statement, such as 2 > 3</p>
+			<p>Your light should not turn on, because the while loop will not activate.</p>
+			<p>8. Try entering other true statements, using the is less than, < operator in the condition. Make sure to run the python code cleanup.py to set your GPIO pins back to default state each time.</p>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+
+<!-- Exercise 4-->
+<div class="custom-container">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Exercise 4: Assigning variables and comparing them</h2>
+			<p>1. Keep bread board set up the same as in Module 3 Exercise 3.</p>
+			<p>2. Open nano file <code>ex3_4.py</code></p>
+			<p>3. See directions in red in the nano file. Assign variable x to be 2 and variable y to be 1+1</p>
+			<p>4. Use comparison operator ==, which means is equal to, to compare x and y. This statement should be true, and therefore activate your while loop.</p>
+			<p>5. Run the python code, and your LED light should start blinking.</p>
+			<p>6. Run <code>cleanup.py</code></p>
+		</div>
+	</div>
+</div>
+<!-- END of Excercises -->
+<br>
+<br>
+<br>
+
+<!-- Final -->
+<div class="custom-container">
+	<div class="primary-lesson-box">
+		<div class="gray">
+		<h1 class='lesson-title center gray'>Time to celebrate.</h1>
+		<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Pat yourself on the back, give a classmate a high five!</p>
+		<p><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Check with the instructor you're good to proceed.</p>
+		</div>
+		<div class="center">
+			<%= link_to "< Back to moduel 1", lesson_fundamental_gpio_path, class:"btn btn-primary" %>
+			<%= link_to "Go to module 2 >", lesson_fundamental_comparison_path, class:"btn btn-primary" %>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+

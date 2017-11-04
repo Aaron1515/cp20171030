@@ -2,7 +2,7 @@
 <ul class="breadcrumb">
   <li><%= link_to "Home", root_path %></li>
   <li>Lessons</li>
-  <li><%= link_to "Fundamentals", lesson_robot_car_path%></li>
+  <li><%= link_to "Fundamentals", lesson_fundamental_path%></li>
   <li>Module 1 - GPIO</li>
 </ul>
 <!-- End of Bread Crumb -->
@@ -47,11 +47,11 @@
 			<br>
 
 			<p>Example: Set pin number 11 to on</p>
-			<p><pre class="image-300" style="margin-left: 20px">GPIO.output(11, GPIO.high)</pre></p>
+			<p><pre class="image-300" style="margin-left: 20px">GPIO.output(11, GPIO.HIGH)</pre></p>
 			<br>
 
 			<p>Example: Set pin number 11 to off</p>
-			<p><pre class="image-300" style="margin-left: 20px">gpio.output(11, gpio.LOW)</pre>
+			<p><pre class="image-300" style="margin-left: 20px">GPIO.output(11, GPIO.LOW)</pre>
 			</p>
 			<br>
 			<p>The function can then be used later in the code. For example, to print the result of 5+10, you would write:</p>
@@ -66,7 +66,8 @@
 		<div class="gray">
 			<h1 class='lesson-title center gray'>Learning Opportunity</h1>
 			<p><b>Why is the terminals shorter and longer the LED?</b>  The longer terminal on the led indicate that is the positive and the shorter terminal is negitive.</p>
-			<p><b>Why we use all caps on GPIO?</b> GPIO is a type of variable we called a library.  But it also falls into the rule being a variable that we should never change the variable to anything else so we capitlized the whole GPIO to remind us not to change the variable of GPIO.<p>
+			<p><b>What is a variable?</b> Variable are stored data.  Variable could be number(s) or string(s).</p>
+			<p><b>What is a functioin?</b> Functions are stored scripts that could be reused.  You might hear the word "method" from other programming language that refer to funcions.</p>
 		</div>
 	</div>
 </div>
@@ -75,17 +76,24 @@
 <br>
 <br>
 
-<!-- Lesson Box Prime-->
+<!-- Excercises -->
 <div class="custom-container gray">
 	<h1>Excercises</h1>
 </div>
 
+
+<!-- Excercise 1 -->
 <div class="custom-container gray">
 	<div class="second-lesson-box">
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 1: Turn LED light on with GPIO pin 2 (constant 3.3V)????????????????</h2>
 			<p>1. Identify the GPIO pins that you need. You will need GPIO Pin 2, which gives out a constant 3.3V, and GPIO Pin 6, which is ground. Add a female-to-male wire to each pin.</p>
 		</div>
+		<div>
+			<div><%= image_tag ("gpio1.png")%></div>
+		</div>
+		<p>2. Plug in male end of the wires to bread board. Set up LED light and resistor (220 ohms) on bread board.</p>
+		<div><div><%= image_tag ("gpio2.png")%></div></div></div>
 	</div>
 </div>
 
@@ -93,28 +101,51 @@
 <br>
 <br>
 
-<!-- Lesson Box Prime-->
+<!-- Exercise 2-->
 <div class="custom-container">
 	<div class="second-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Exercise 2: CDefine functions for moving the car left and right.</h2>
-			<p>1. Open file <code>carfunctions.py</code> by using the command <code>sudo nano carfunctions.py</code></p>
-			<p>2. Follow the instructions in red for “Exercise 2”. Refer to the Lesson & Syntax section if necessary.</p>
-			<p>3. Save and exit the <code>carfunctions.py</code> file.</p>
-			<p>4. Open file robot.py by using the command sudo nano <code>robot.py</code></p>
-			<p>5. Type in the commands to have the car move forwards, turn left, move forward, turn right, and move forward.</p>
-			<p>6. Save and execute your code.</p>
+			<h2 class='lesson-title gray'>Exercise 2: Turn LED light on with GPIO pin 11</h2>
+			<p>1. Open the Raspberry Pi&trade; terminal.</p>
+			<p>2. Open nano file <code>ex1_2.py</code> by typing <code>sudo nano ex1_2.py</code> in the terminal.</p>
+			<p>3. Set up bread board the same way as exercise 1, except move male-to-female wire from GPIO Pin 2 to GPIO Pin 11.</p>
+			<div><div><%= image_tag ("gpio3.png")%></div></div>
+			<p>4. Read directions in red and complete the exercise. Refer to the Module 1 Lesson & Syntax to know what syntax to use.</p>
+			<p>5. Save and exit your nano file by using CTRL+X, then type “y”, and hit enter.</p>
+			<p>6. Execute the python code by typing <code>sudo python ex1_2.py</code></p>
+			<p>7. Look at the GPIO pin layout diagram. Do you think you can use a different GPIO pin? If you think you can, adjust the wiring and your code and see if you can still turn on the light.</p>
 		</div>
 	</div>
 </div>
 
 <br>
 <br>
+
+<!-- Exercise 3-->
+<div class="custom-container">
+	<div class="second-lesson-box">
+		<div class="gray">
+			<h2 class='lesson-title gray'>Exercise 3: Toggle one LED light on and one LED light off with different GPIO Pins, using GPIO Pin 11 and GPIO Pin 13.</h2>
+			<p>Set up bread board the same way as in Module 1 Exercise 2. Then add another resistor and LED light to the bread board. Then add another male to female wire from GPIO Pin 13 to the second LED light. Note: Have the same ground with the second resistor</p>
+			<div><div><%= image_tag ("gpio4.png") %></div></div>
+			<p>2. Open nano file <code>ex1_3.py</code></p>
+			<p>3. Read directions in red and complete the exercise. Refer to the Module 1 Lesson & Syntax to know what syntax to use.</p>
+			<p>4. Save and exit your nano file.</p>
+			<p>5. Execute the python code.</p>
+			<p>6. Now open nano file <code>ex1_3.py</code> again and change the code such that the second LED light connected to GPIO Pin 13 is on, and the first LED light connected to GPIO Pin 11 is off, and execute your code.</p>
+		</div>
+	</div>
+</div>
+
 <br>
 <br>
 
 
-<!-- Lesson Box -->
+<br>
+<br>
+
+
+<!-- Excecise 3 -->
 <div class="custom-container">
 	<div class="primary-lesson-box">
 		<div class="gray">
@@ -123,7 +154,7 @@
 		<p><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Check with the instructor you're good to proceed.</p>
 		</div>
 		<div class="center">
-			<%= link_to "< Back to fundamental >", lesson_fundamental_path, class:"btn btn-primary" %>
+			<%= link_to "< Back to fundamentals", lesson_fundamental_path, class:"btn btn-primary" %>
 			<%= link_to "Go to module 2 >", lesson_fundamental_loops_path, class:"btn btn-primary" %>
 		</div>
 	</div>

@@ -5,5 +5,9 @@ class ResourceController < ApplicationController
 
   def guide
   end
+
+  def trouble
+  	
+  end
   
 end

@@ -35,7 +35,7 @@ Planning
 
 Site map
 
-![site map image](planning/site_map_01.png "Site Map v.01")
+![site map image](planning/site_map_02.png "Site Map v.01")
 
 
 Prototype Site

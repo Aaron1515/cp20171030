@@ -33,9 +33,13 @@ Our team
 
 Planning
 
-Site map
+Site map v2
 
-![site map image](planning/site_map_02.png "Site Map v.01")
+![Site Map](planning/site_map_02.png "Site Map v.01")
+
+Schema v1
+
+![Schema](planning/schema_01.png "Site Map v.01")
 
 
 Prototype Site

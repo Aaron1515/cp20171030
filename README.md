@@ -37,9 +37,9 @@ Site map v2
 
 ![Site Map](planning/site_map_02.png "Site Map v.01")
 
-Schema v1
+Schema v2
 
-![Schema](planning/schema_01.png "Site Map v.01")
+![Schema](planning/schema_02.png "Schema v.02")
 
 
 Prototype Site

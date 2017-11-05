@@ -48,7 +48,15 @@
 			            <li><a href="#">Coming Soon...</a></li>
 			          </ul>
 			        </li>
-			      	<li><a href="#">Resource</a></li>
+			      		<li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resource<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			          	<li><%= link_to "Setup Guide", resource_guide_path %></li>
+			          	<li><%= link_to "Github", ("https://github.com/CurricuPi"), target: :_blank%></li>
+			            <li role="separator" class="divider"></li>
+			          	<li><%= link_to "Stuck?", resource_trouble_path, target: :_blank %></li>
+			          </ul>
+			        </li>
 			        <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
 			          <ul class="dropdown-menu">

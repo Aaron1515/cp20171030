@@ -28,7 +28,7 @@ Our team
 
 * Cebrian - Collabator
 
-* Stephanine - UX & UI Designer
+* Stephanie - UX & UI Designer
 
 
 Planning

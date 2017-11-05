@@ -5,6 +5,11 @@
   <div class="welcome-text-center">
   	<h1>Affordable, Accessible & Hands-on</h1>
   	<p>We put together the modules & materials so you can focus on the students</p>
+  	<br>
+  	<div>
+	  	<%= link_to "LEARN MORE", about_what_we_offer_path, class: "custom-btn btn-prime" %>
+	  	<%= link_to "CONTACT US", contact_index_path, class: "custom-btn btn-prime-revert" %>
+  	</div>
   </div>
 </div>
 
@@ -16,12 +21,13 @@
 		<div class="col-sm-7 col-md-6 col-lg-5">
 			<%= image_tag "welcome1.png", class:"pop-up", style:"width:400px"  %>
 		</div>
-		<div class="col-sm-7 col-md-5 col-lg-5">
+		<div class="col-sm-7 col-md-5 col-lg-5 gray">
 			<h3>Learn the Fundamentals</h3>
 			<p>Difficulty: Beginner</p>
 			<p>Objective: Introduce computer science fundamentals to students with no background in computer science through engaging activey-base modules with Rasberry Pi</p>
 			<p>Time: 1 day to 1 week</p>
-			<%= link_to "GO TO LESSON", lesson_fundamental_path, class: 'btn btn-primary' %>
+			<br>
+			<%= link_to "GO TO LESSON", lesson_fundamental_path, class: "custom-btn btn-prime" %>
 		</div>	
 	</div>
 </div>
@@ -31,14 +37,14 @@
 <!-- 2 -->
 <div class="container">
 	<div class="row">
-		<div class="col-sm-7 col-md-6 col-lg-5">
+		<div class="col-sm-7 col-md-6 col-lg-5 gray">
 			<h3>Build a Robot Car</h3>
 			<p>Difficulty: Intermediate</p>
 			<p>Objective: Students will achieve a basic understanding of the fundamentals of robotics by observing how computer commands translate into physical movement using Python</p>
 			<p>Time: 1 weeks to 4 weeks</p>
-			<%= link_to "GO TO LESSON", lesson_robot_car_path, class: 'btn btn-primary' %>
+			<br>
+			<%= link_to "GO TO LESSON", lesson_robot_car_path, class: "custom-btn btn-prime" %>
 		</div>	
-
 		<div class="col-sm-7 col-md-6 col-lg-5">
 			<%= image_tag "welcome2.png", class:"pop-up", style:"width:400px"  %>
 		</div>
@@ -54,12 +60,14 @@
 		<div class="col-sm-7 col-md-6 col-lg-5">
 			<%= image_tag "welcome3.png", class:"pop-up", style:"width:400px" %>
 		</div>
-		<div class="col-sm-7 col-md-5 col-lg-5">
+		<div class="col-sm-7 col-md-5 col-lg-5 gray">
 			<h3>Build a Self Driving Robot Car</h3>
 			<p>Difficulty: Advanced</p>
 			<p>Objective: Build upon the Robot Car Lesson and add additional code to make the Robot Car autonomus.  Students will solidify their understading of Python</p>
 			<p>Time: 2 weeks to 8 weeks</p>
-			<%= link_to "GO TO LESSON", lesson_self_driving_car_path, class: 'btn btn-primary' %>		</div>	
+			<br>
+			<%= link_to "GO TO LESSON", lesson_self_driving_car_path, class: "custom-btn btn-prime" %>
+		</div>	
 	</div>
 </div>
 

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'contact/index'
 
   get 'resource/index'
-  get 'resource/setup'
+  get 'resource/guide'
 
   get 'about/what_we_offer'
   get 'about/who_we_are'

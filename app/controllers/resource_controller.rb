@@ -3,7 +3,7 @@ class ResourceController < ApplicationController
   def index
   end
 
-  def setup
+  def guide
   end
   
 end

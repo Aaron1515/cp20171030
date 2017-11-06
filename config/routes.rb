@@ -28,6 +28,10 @@ Rails.application.routes.draw do
   get 'lesson/robot_car_motor'
   get 'lesson/robot_car_define_function'
 
+
+  get 'download/robot_car'
+  get 'download/fundamental'
+
   root 'welcome#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

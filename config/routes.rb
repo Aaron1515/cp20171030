@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 
 
   get 'download/robot_car'
+  get 'download/fundamental'
 
   root 'welcome#index'
 

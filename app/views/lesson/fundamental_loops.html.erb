@@ -29,10 +29,11 @@
 		<h2 class='lesson-title white'>Learning Goal</h2>
 		<p>
 			<ul>
-				<li>Understand the concept of loops and potential applications </li>
-				<li>Distinguish between different types of loops (For versus While)</li>
-				<li>Learn Python syntax for creating loops</li>
-				<li>Advanced: Learn how to create nested loops</li>
+				<li>Understand concept of loop and some potential applications for it</li>
+				<li>Distinguish between different types of loops (For vs While)</li>
+				<li>Learn Python syntax for creating simple loops</li>
+				<li>Learn how to use the time.sleep() Python function</li>
+				<li>Advanced: learn how to create nested loops</li>
 			</ul>
 		</p>
 		</div>
@@ -53,6 +54,13 @@
 			<p>A loop statement allows someone to execute a statement or statements a certain number of times. The syntax is written as follows:<p>
 			<p><pre class="image-300" style="margin-left: 20px">for x in range(100):<br />	print “Hello!”</pre></p>
 			<p>The code will go that loop 100 times, printing the word Hello! that many times. You can put more information inside the loop and control how many times the code is run inside the loop. Indent each line of code that you would want to loop (see how the code print “Hello!” is indented in the example above). For this module, consider how you would change the code from Module 1 and cause your LED light to blink.</p>
+			<p>An important built-in Python function is the "Time" function. The syntax is.  Inorder to used this function we will need to import it into our project by using the code:</p>
+			<p><pre class="image-300" style="margin-left: 20px">import time as Time</pre></p>
+			<p>Now we can use the function Time.sleep() in the folowing example:</p>
+			<p><pre class="image-300" style="margin-left: 20px">Time.sleep(<span class="code">number</span>)</pre></p>
+			<p>This command tells the computer how long, in seconds, to delay the execution of your next line of code. The line of code right before this command will keep running until then.</p>
+			<p><b>Example:</b> The code below keeps the LED light connected to GPIO Pin 11 on for 3 second.</p>
+			<p><pre class="image-300" style="margin-left: 20px">GPIO.output(11, gpio.HIGH)<br />Time.sleep(3)</pre></p>
 		</div>
 	</div>
 </div>
@@ -62,11 +70,11 @@
 	<div class="primary-lesson-box">
 		<div class="gray">
 			<h1 class='lesson-title center gray'>Learning Opportunity</h1>
-			<p>Change the above syntax to:</p>
+			<p>If you change the syntax from the example in the Lesson & Syntax section to:</p>
 			<p><pre class="image-300" style="margin-left: 20px">for x in range(5):<br />	print “Hello!”</pre></p>
 			<p>Your resule will be:</p>
 			<p><pre class="image-300" style="margin-left: 20px">Hello<br />Hello<br />Hello<br />Hello<br />Hello<br /></pre></p>
-			<p>This is a loop that will excute as many times as you specify between the parenthese.</p>
+			<p>This is a loop that will repeat as many times as you specify between the parentheses. In this case, the loop repeats 5 times.</p>
 		</div>
 	</div>
 </div>
@@ -85,13 +93,12 @@
 <div class="custom-container gray">
 	<div class="second-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Exercise 1: Have an LED light five times</h2>
-			<p>1. Set up the breadboard the same as Module 1, Exercise 2</p>
-			<p>2. Open nano file <code>ex2_1.py</code></p>
-			<p>3. Follow the directions in red. Note, you will need a <code>Time.sleep(1)</code> function in there. This command tells the computer how long to wait before excuting the next line of code.</p>
-			<div><%= image_tag ("loops1.png")%></div>
-			<p>The following example code keeps the LED light connected to GPIO Pin 11 on for 3 second then it will disconnect and turn off the lights:</p>
-			<p><pre class="image-300" style="margin-left: 20px">GPIO.output(11, GPIO.HIGH)<br />Time.sleep(3)<br />GPIO.output(11, GPIO.LOW)</pre></p>
+			<h2 class='lesson-title gray'>Exercise 1: Have an LED light blink five times</h2>
+			<p>1. Set up the breadboard the same as Module 1, Exercise 2. The diagram is shown below:</p>
+			<div><div><%= image_tag "gpio3.png" %></div></div>
+			<p>2. Open ‘Module2’ folder and open python file <code>ex2_1.py</code></p>
+			<p>3. Follow the directions in the python file. Note: you will need to use <code>Time.sleep(1)</code> function in it.</p>
+			<p>4. Save and run the python file. The LED light should blink 5 times.</p>
 		</div>
 	</div>
 </div>
@@ -106,9 +113,10 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 2: Have one LED light blink quickly first, and one LED light blink slowly after.</h2>
 			<p>1. Set up the breadboard the same way as Module 1, Exercise 3. You will need to use GPIO 11 and GPIO 13.</p>
-			<p>2. Open nano file <code>ex2_2a.py</code></p>
-			<p>3. Follow the directions in red. Note to use two for loops. Refer to the Lesson & Syntax for the syntax for the for loops. Use the <code>Time.sleep(number)</code> command as you did before.</p>
-			<div><%= image_tag ("loops2.png")%></div>
+			<div><div><%= image_tag "gpio4.png" %></div></div>
+			<p>2. Open python file <code>ex2_2a.py</code></p>
+			<p>3. Follow the directions in the python file. Note to use two for loops. Refer to the Module 2 Lesson & Syntax for the syntax to create the for loops. Use the <code>Time.sleep(number)</code> command as you did before. </p>
+			<p>4. Save and run the python file. One LED light should blink 5 times, followed by the second LED light, which will also blink 5 times. One of the LED lights should blink faster than the other.</p>
 		</div>
 	</div>
 </div>
@@ -121,9 +129,10 @@
 	<div class="second-lesson-box">
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 3: Have one LED light blink quickly and one LED light blink slowly simultaneously.</h2>
-			<p>Leave the breadboard as is from Module 2, Exercise 2a.</p>
-			<p>Open nano file <code>ex2_2b.py</code></p>
-			<p>Follow the directions in red. Note to use one for loop this time and use the <code>Time.sleep(number)</code> command as you did before.</p>
+			<p>1. Leave the breadboard as is from Module 2, Exercise 2</p>
+			<p>2. Open python file <code>ex2_2b.py</code></p>
+			<p>3. Follow the directions in red. Note to use one for loop this time and use the <code>Time.sleep(number)</code> command as you did before.</p>
+			<p>4. Save and run the python file. Both LED lights should start blinking at the same time (5 times total), but one should blink faster than the other.</p>
 		</div>
 	</div>
 </div>

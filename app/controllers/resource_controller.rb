@@ -7,7 +7,6 @@ class ResourceController < ApplicationController
   end
 
   def trouble
-  	
   end
 
   def getting_started

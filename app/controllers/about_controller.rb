@@ -10,4 +10,9 @@ class AboutController < ApplicationController
 
 	def faq
 	end
+
+	def our_mission
+		
+	end
+	
 end

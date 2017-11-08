@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'about/what_we_offer'
   get 'about/who_we_are'
   get	'about/faq'
+  get 'about/our_mission'
 
   get 'lesson/index'
 

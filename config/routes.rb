@@ -7,10 +7,12 @@ Rails.application.routes.draw do
   get 'resource/index'
   get 'resource/guide'
   get 'resource/trouble'
+  get 'resource/getting_started'
 
   get 'about/what_we_offer'
   get 'about/who_we_are'
   get	'about/faq'
+  get 'about/our_mission'
 
   get 'lesson/index'
 

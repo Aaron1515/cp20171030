@@ -4,7 +4,7 @@
 	  <li><%= link_to "Home", root_path %></li>
 	  <li>Lessons</li>
 	  <li><%= link_to "Fundamentals", lesson_fundamental_path%></li>
-	  <li>Module 5 - Logic</li>
+	  <li>Module 5 - Logic Gates</li>
 	</ul>
 </div>
 <!-- End of Bread Crumb -->
@@ -50,7 +50,7 @@
 			<h1 class='lesson-title center gray'>Lesson & Syntax</h1>
 			<p>Logic gate is something that can use a Boolean function (see Module 4). You do a logic statement that has one or more inputs (binary inputs, i.e. 0 and 1) and generates one output (binary output, 0 and 1). The inputs and output are True (1) or False (0) statements. The syntax that is used to describe this logic gate is “and”, “or”, “not”, “nor”, “xor”, “xnor”, “nor”, and “nand”. In this module, we will only do “and”, “or”, and “not”.<p>
 			<P>Let’s think of “and” and what it means. And is a two-input gate, which requires two statements and then the output will then say if it is true or false. The And statement requires both inputs to be true in order to give a true output.  Recall that 1 is True and 0 is False.</P>
-			<table class="custom-table">
+			<table class="custom-table custom-container">
 			  <tr>
 			    <th colspan="2" style="width:67%;">Input</th>
 			    <th>Output</th>
@@ -77,7 +77,7 @@
 			  </tr>
 			</table>
 			<p>Now that we have the And gate, we can do an Or gate. Using the same example as before, we need two inputs. Now this is different because And required that both statements be true, but Or is if either conditions are true, then you will have a true output. See the truth table below.</p>
-			<table class="custom-table">
+			<table class="custom-table custom-container">
 			  <tr>
 			    <th colspan="2" style="width:67%;">Input</th>
 			    <th>Output</th>
@@ -104,8 +104,7 @@
 			  </tr>
 			</table>
 			<p>The Not gate function is different where you only need one binary input and will get one binary output. This gate is called an “inverter” because the function will flip the input and the output. Here is the truth table.</p>
-			<P><span class="code">button_state == 1</span> or <span class="code">button_state == True</span> is a <b>True</b> statement.</P>
-			<table class="custom-table">
+			<table class="custom-table custom-container">
 			  <tr>
 			    <th>Input</th>
 			    <th>Output</th>
@@ -137,11 +136,15 @@
 <div class="custom-container gray">
 	<div class="second-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Exercise 1: Configure two buttons so when both are pressed, both the LED lights up</h2>
+			<h2 class='lesson-title gray'>Exercise 1: Configure two buttons so when both are pressed simultaneously, both the LEDs light up</h2>
 			<p>1. Configure the breadboard to have two buttons and two LED lights. Each button should control an individual LED light.</p>
-			<div><%= image_tag ("logic1.png")%></div>
-			<p>2. Open nano file <code>ex5_1.py</code></p>
-			<p>3. Read the directions in red and complete the exercise. Note that GPIO Pin 11 goes into the button 1 (at the top) and GPIO Pin 13 goes into button 2, which is underneath the first. When button 1 is pressed, GPIO Pin 11’s output is true, which is referred to the variable <span class="code">button_state_1</span>. The variable <span class="code">button_state_1</span> refers to the state of the button 1: if the button is pressed then it will equal <b>True</b>, and if the button is not pressed, it will equal <b>False</b>. Same with variable <span class="code">button_state_2</span>, which refers to the state of button 2. GPIO Pin 15 and GPIO Pin 18 are connected to LED light 1 and LED light 2 respectively. See diagram from step 1.</p>
+			<div><div><%= image_tag ("logic1.png")%></div></div>
+			<p>2. Open python file <code>ex5_1.py</code></p>
+			<p>3. Read the directions in red and complete the exercise. Note that GPIO Pin 11 takes an input from button 1 (at the top) and GPIO Pin 13 takes an input from button 2, which is below button 1.</p>
+			<p>Note: When button 1 is pressed, GPIO Pin 11 is True, which is referred to the variable <span class="code-text">button_state_1</span>. The variable <span class="code-text">button_state_1</span> refers to the state of the button 1: if the button is pressed then it will equal True, and if the button is not pressed, it will equal False. Same with variable <span class="code-text">button_state_2</span>, which refers to the state of button 2. GPIO Pin 15 and GPIO Pin 18 are connected to LED light 1 and LED light 2 respectively.  See diagram from step 1.</p>
+			<p>4. Save and run the python file. When both button 1 and button 2 are pressed, the both LED lights should turn on. If either button 1 OR button 2 is pressed, neither LED light should turn on.</p>
+			<p>5. <b>CTRL+C</b> in the terminal to stop code</p>
+			<p>6. Run <code>cleanup.py</code></p>
 		</div>
 	</div>
 </div>
@@ -154,10 +157,14 @@
 <div class="custom-container">
 	<div class="second-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>Exercise 2: Configure two buttons so that when either is pressed, the LED lights up.</h2>
+			<h2 class='lesson-title gray'>Exercise 2: Configure two buttons so that when either is pressed, the LEDs lights up.</h2>
 			<p>1. Keep the same configuration on the breadboard as Module 5 Exercise 1.</p>
-			<p>2. Open nano file <code>ex5_2.py</code></p>
-			<p>3. Read the directions in red. The previous code from Module 5 Exercise 1 is set up for you, so add another <b>If/Else</b> statement with an <b>Or</b> logic gate.</p>
+			<div><div><%= image_tag ("logic1.png")%></div></div>
+			<p>2. Open python file <code>ex5_2.py</code></p>
+			<p>3. Read the directions in the python file. The previous code from Module 5 Exercise 1 is set up for you, so add another <b>if/else</b> statement with an <b>Or</b> logic gate.</p>
+			<p>4. Save and run the python file. If either button is pressed, or both are pressed at the same time, then both LEDs should light up.</p>
+			<p>5. <b>CTRL+C</b> in the terminal to stop code</p>
+			<p>6. Run <code>cleanup.py</code></p>
 		</div>
 	</div>
 </div>
@@ -171,8 +178,12 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 3: Configure two buttons so that when neither are pressed, the LED lights up.</h2>
 			<p>1. Keep the same configuration on the breadboard as Module 5 Exercise 1.</p>
-			<p>2. Open nano file <code>ex5_3.py</code></p>
-			<p>3. Read the directions in red. Do not forget that to use a Not logic gate, it is not as easy as typing in the word “Not”. You must use a condition of != that will negate a statement to be not <b>True</b>.</p>
+			<div><div><%= image_tag ("logic1.png")%></div></div>
+			<p>2. Open python file <code>ex5_3.py</code></p>
+			<p>3. Read the directions the python file. Remember that to use a <span class="code-text">Not</span> logic gate, it is not as easy as typing in the word “Not”. You must use the operator <span class="code-text">!=</span></p>
+			<p>4. Save and run the python file. The default state of the LED lights should be on. If either or both buttons are pressed, the LED lights should turn off.</p>
+			<p>5. <b>CTRL+C</b> in the terminal to stop code</p>
+			<p>6. Run <code>cleanup.py</code></p>
 		</div>
 	</div>
 </div>

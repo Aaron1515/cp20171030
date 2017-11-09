@@ -29,8 +29,8 @@
 		<h2 class='lesson-title white'>Learning Goal</h2>
 		<p>
 			<ul>
-				<li>Learn the basic of "if" statements</li>
-				<li>Learn how to incorporate If statements with conditionals</li>
+				<li>Learn the basics of using “if” statements</li>
+				<li>Incorporating conditionals in “if” statements</li>
 				<li>Learn how to set GPIO pin as an input and how to interface with buttons</li>
 			</ul>
 		</p>
@@ -49,14 +49,13 @@
 	<div class="primary-lesson-box">
 		<div class="gray">
 			<h1 class='lesson-title center gray'>Lesson & Syntax</h1>
-			<p>For this exercise, the button_state variable is created to indicate whether the button is pressed, or if the button is not pressed.<p>
-			<P>If the button is pressed,</P>
-			<P><span class="code">button_state == 1</span> or <span class="code">button_state == True</span> is a <b>True</b> statement.</P>
-			<p>If the button is not pressed, the above would be a false statement, and <span class="code">button_state == 0</span> or <span class="code">button_state == False</span> would be a <b>True</b> statement.</p>
-			<p>Below is the syntax for If/Else statement:</p>
+			<p>For this Module, the <span class="code-text">button_state</span> variable is created to indicate whether the button is pressed, or if the button is not pressed.<p>
+			<P><span class="code-text">button_state == 1</span> or <span class="code-text">button_state == True</span> is a <b>True</b> statement. </P>
+			<P>If the button is not pressed, the above would be a false statement, and <span class="code-text">button_state == 0</span> or <span class="code-text">button_state == False</span> would be a <b>True</b> statement.</P>
+			<p>Below is the syntax for If/Else statement</p>
 			<p><pre class="image-400" style="margin-left: 20px;">if [<span class="code">condition</span>]:<br />	[<span class="code">Code for if condition is true</span>]<br />else:<br />	[<span class="code">Code for if condition is false</span>]</pre></p>
-			<p>For example, below is the code for turning on the LED light connected to GPIO Pin 13 if the button is pressed, aka if <span class="code">button_state == True</span>. When the button is not pressed, the LED light should remain off.</p>
-			<p><pre class="image-300" style="margin-left: 20px">if button_state == True:<br />	GPIO.output(13, GPIO.HIGH)<br />else:<br/>	GPIO.output(13, GPIO.LOW)</pre></p>
+			<p>For example, below is the code for turning on the LED light connected to GPIO Pin 13 if the button is pressed, aka if <span class="code-text">button_state == True</span>. When the button is not pressed, the LED light should remain off.</p>
+			<p><pre class="image-400" style="margin-left: 20px">if :<br />	GPIO.output(13, GPIO.HIGH)<br />else:<br/>	GPIO.output(13, GPIO.LOW)</pre></p>
 		</div>
 	</div>
 </div>
@@ -76,11 +75,13 @@
 	<div class="second-lesson-box">
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 1: Push button to turn on LED light</h2>
-			<p>Configure the button, an LED light, a resistor, three males-to-females and one male-to-male on the bread board as shown in the diagram below:</p>
-			<div><%= image_tag ("conditional1.png")%></div>
-			<p>2. Open nano file <code>ex4_1.py</code></p>
-			<p>3. Read directions in red and complete the exercise. Fill in the conditional statements to your code. Note that GPIO Pin 11 goes into the button and GPIO Pin 13 goes into the LED light. When the button is pressed, GPIO Pin 11’s output is <b>True</b>, which is referred to the variable <span class="code">button_state</span>. The variable <span class="code">button_state</span> refers to the state of the button: if the button is pressed then it will equal <b>True</b>, and if the button is not pressed, it will equal <b>False</b>.</p>
-			<p>When you press the button, your LED light should turn on. If you are not pressing the button, the LED light should remain off. Type <b>CTRL+C</b> to your terminal to stop the code.</p>
+			<p>1. Configure the button, an LED light, a resistor, three males-to-females and one male-to-male on the bread board as shown in the diagram below:</p>
+			<div><div><%= image_tag ("conditional1.png")%></div></div>
+			<p>2. Open the ‘Module4’ folder and open python file <code>ex4_1.py</code></p>
+			<p>3. Read directions in the python file and complete the exercise. Fill in the conditional statements to your code. Note that GPIO Pin 11 takes an input from the button and GPIO Pin 13 gives an output to the LED light. When the button is pressed, GPIO Pin 11 is <b>True</b>, which is referred to the variable <span class="code-text">button_state</span>. The variable <span class="code-text">button_state</span> refers to the state of the button: if the button is pressed then it will equal <b>True</b>, and if the button is not pressed, it will equal <b>False</b>.</p>
+			<p>4. Save and run the python file. When you press the button, your LED light should turn on. If you are not pressing the button, the LED light should remain off.</p>
+			<p>5. <b>CTRL+C</b> in your terminal to stop the code.</p>
+			<p>6. Run <code>cleanup.py</code></p>
 		</div>
 	</div>
 </div>
@@ -95,9 +96,12 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 2: Push button to turn off LED light</h2>
 			<p>1. Keep the same configuration on the breadboard as Module 4, Exercise 1.</p>
-			<p>2. Open nano file <code>ex4_2.py</code></p>
-			<p>3. Read the directions in red. Refer to <code>ex4_1.py</code> if necessary in order to write the conditional codes for each conditional statement.</p>
-			<p>4. When you run your code, the LED light default state should be on, and when you press the button, it should turn off. Type <b>CTRL+C</b> to your terminal to stop the code.</p>
+			<div><div><%= image_tag ("conditional1.png")%></div></div>
+			<p>2. Open python file <code>ex4_2.py</code></p>
+			<p>3. Read the directions in the python file. Refer to <code>ex4_1.py</code> if necessary in order to write the conditional codes for each conditional statement. </p>
+			<p>4. Save and run the python file. The LED light default state should be on, and when you press the button, it should turn off.</p>
+			<p>4. <b>CTRL+C</b> in your terminal to stop the code</p>
+			<p>5. Run <code>cleanup.py</code></p>
 		</div>
 	</div>
 </div>
@@ -111,9 +115,12 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 3: Push button to blink LED light</h2>
 			<p>1. Keep the same configuration on the breadboard as Module 4, Exercise 1.</p>
-			<p>2. Open nano file <code>ex4_3.py</code></p>
-			<p>3. Read the directions in red. Fill in the conditional codes such that when the button is pressed down, the LED light will blink 3 times.</p>
-			<p>Remember to use the “for” loop and the <code>Time.sleep(number)</code> function after setting the GPIO outputs. Hint: See nano file <code>ex2_1.py</code> (Module 2, Exercise 1) and the lesson from Module 2.</p>
+			<div><div><%= image_tag ("conditional1.png")%></div></div>
+			<p>2. Open python file <code>ex4_3.py</code></p>
+			<p>3. Read the directions in the python file. Fill in the conditional codes such that when the button is pressed down, the LED light will blink 3 times.<br />Remember to use the “for” loop and the <span class="code-text">Time.sleep(number)</span> function after setting the GPIO outputs. Hint: See python file <code>ex2_1.py</code> (Module 2, Exercise 1) and the Module 2 Lesson & Syntax. </p>
+			<p>4. Save and run the python file. When you press the button, the LED light should blink 3 times.</p>
+			<p>5. <b>CTRL+C</b> in your terminal to stop the code.</p>
+			<p>6. Run <code>cleanup.py</code></p>
 		</div>
 	</div>
 </div>

@@ -1,3 +1,19 @@
+<div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <img src="" class="enlargeImageModalSource" style="width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <!-- Bread Crumb -->
 <div class="sticky">
 	<ul class="breadcrumb" id="breadcrumb">
@@ -125,7 +141,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 1: Using the comparison operator ==</h2>
 			<p>1. Set up breadboard the same way as in Module 1, Exercise 2:</p>
-			<div><div><%= image_tag ("gpio3.png")%></div></div>
+			<div><div><%= image_tag ("gpio3.png"), class:"pop-img" %></div></div>
 			<p>2. Open the ‘Module3’ folder and open python file <code>ex3_1.py</code></p>
 			<p>3. Enter a true statement (such as <span class="code-text">1+1 == 2</span>) for the while condition. Remember to use the == sign, which is an equal sign for comparisons, whereas the = sign is to assign variables which we will cover in a later exercise.</p>
 			<p>4. Save and run the python code. Your LED light should start blinking if your conditional statement is True.</p>
@@ -148,7 +164,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 2: Using the comparison operator !=</h2>
 			<p>1. Keep bread board set up the same as in Module 3 Exercise 1.</p>
-			<div><div><%= image_tag ("gpio3.png")%></div></div>
+			<div><div><%= image_tag ("gpio3.png"), class:"pop-img" %></div></div>
 			<p>2. Open python file <code>ex3_2.py</code></p>
 			<p>3. See directions in the python file. Enter a true statement using the <span class="code-text">not equal to</span> comparison operator, <span class="code-text">!=</span>  (Example: <span class="code-text">1+3 != 2</span>) for the while condition.</p>
 			<p>4. Save and run the python file. Your LED light should start blinking if your conditional statement is <b>True</b>.</p>
@@ -170,7 +186,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 3: Using the comparison operator > and <</h2>
 			<p>1. Keep bread board set up the same as in Module 3 Exercise 1.</p>
-			<div><div><%= image_tag ("gpio3.png")%></div></div>
+			<div><div><%= image_tag ("gpio3.png"), class:"pop-img" %></div></div>
 			<p>2. Open python file <code>ex3_3.py</code></p>
 			<p>3. See directions in the python file. Enter a true statement using the greater than comparison operator, > (example: 3 > 2) for thSave and run the python code. Your LED light should start blinking if your conditional statement is <code>True</code></p>
 			<p>4. Save and run the python code. Your LED light should start blinking if your conditional statement is True.</p>
@@ -192,7 +208,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 4: Assigning variables and comparing them</h2>
 			<p>1. Keep bread board set up the same as in Module 3 Exercise 1.</p>
-			<div><div><%= image_tag ("gpio3.png")%></div></div>
+			<div><div><%= image_tag ("gpio3.png"), class:"pop-img" %></div></div>
 			<p>2. Open python file <code>ex3_4.py</code></p>
 			<p>3. See directions in the python file. Assign variable <span class="code-text">x</span> to be <span class="code-text">2</span> and variable y to be <span class="code-text">1+1</span></p>
 			<p>4. Use comparison operator <span class="code-text">==</span>, which means <span class="code-text">equal to</span>, to compare <span class="code-text">x</span> and <span class="code-text">y</span>. This statement should be true, and therefore activate your while loop.</p>
@@ -224,3 +240,14 @@
 
 <br>
 <br>
+
+
+
+<script type="text/javascript">
+$(function() {
+  	$('.pop-img').on('click', function() {
+		$('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+		$('#enlargeImageModal').modal('show');
+	});
+});
+</script>

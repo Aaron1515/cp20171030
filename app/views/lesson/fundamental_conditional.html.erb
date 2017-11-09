@@ -70,7 +70,7 @@
 			<p>Below is the syntax for If/Else statement</p>
 			<p><pre class="image-400" style="margin-left: 20px;">if [<span class="code">condition</span>]:<br />	[<span class="code">Code for if condition is true</span>]<br />else:<br />	[<span class="code">Code for if condition is false</span>]</pre></p>
 			<p>For example, below is the code for turning on the LED light connected to GPIO Pin 13 if the button is pressed, aka if <span class="code-text">button_state == True</span>. When the button is not pressed, the LED light should remain off.</p>
-			<p><pre class="image-400" style="margin-left: 20px">if :<br />	GPIO.output(13, GPIO.HIGH)<br />else:<br/>	GPIO.output(13, GPIO.LOW)</pre></p>
+			<p><pre class="image-400" style="margin-left: 20px">if button_state == True:<br />	GPIO.output(13, GPIO.HIGH)<br />else:<br/>	GPIO.output(13, GPIO.LOW)</pre></p>
 		</div>
 	</div>
 </div>

@@ -15,11 +15,3 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-
-
-$(function() {
-  	$('.pop-img').on('click', function() {
-		$('.enlargeImageModalSource').attr('src', $(this).attr('src'));
-		$('#enlargeImageModal').modal('show');
-	});
-});

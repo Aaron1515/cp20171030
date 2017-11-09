@@ -1,3 +1,19 @@
+<!-- Pop up image modal template -->
+<div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="border: none;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <img src="" class="enlargeImageModalSource" style="width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of image pop up modal -->
+
+
 <!-- Bread Crumb -->
 <div class="sticky">
 	<ul class="breadcrumb" id="breadcrumb">
@@ -64,7 +80,7 @@
 			<br>
 			<p>LED lights have a positive and a negative terminal, which is represented by a longer leg and a shorter leg as shown in the diagram below: </p>
 			<div class="center">
-				<%= image_tag "led.png", class:"image-300" %>
+				<%= image_tag "led.png", class:"image-300 pop-img" %>
 			</div>
 			<p>The positive long leg should be connected to the power source, while the negative short leg should be connected to ground. This is because electric current flows from the positive to the negative terminal.</p>
 		</div>
@@ -100,9 +116,9 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 1: Turn LED light on with GPIO pin 2 (constant 5.0V)</h2>
 			<p>1. Identify the GPIO pins that you need. You will need GPIO Pin 2, which gives out a constant 5V, and GPIO Pin 6, which is ground. Add a female-to-male wire to each pin.</p>
-			<div><div><%= image_tag ("gpio1.png")%></div></div>
+			<div><div><%= image_tag ("gpio1.png"), class: "pop-img" %></div></div>
 			<p>2. Plug in the male end of the wires to bread board. Set up LED light and resistor (220 ohms) on bread board as the diagram shows below. The LED light should light up once the circuit is complete.</p>
-			<div><div><%= image_tag ("gpio2.png")%></div></div></div>
+			<div><div><%= image_tag ("gpio2.png"), class: "pop-img" %></div></div></div>
 			<br>
 		</div>
 	</div>
@@ -120,7 +136,7 @@
 			<p>1. Open the ‘Fundamentals’ folder, and then open the ‘Module1’ folder.</p>
 			<p>2. Open python file <code>ex1_2.py</code> in the ‘Module1’ folder.</p>
 			<p>3. Set up breadboard the same way as Exercise 1, except move male-to-female wire from GPIO Pin 2 to GPIO Pin 11.</p>
-			<div><div><%= image_tag ("gpio3.png")%></div></div>
+			<div><div><%= image_tag ("gpio3.png"), class: "pop-img" %></div></div>
 			<p>4. Read directions in the python file and complete the exercise. Refer to the Module 1 Lesson & Syntax section to know what syntax to use.</p>
 			<p>5. Save and run the python file. The LED light should turn on for 5 seconds.</p>
 			<p>6. Look at the GPIO pin layout diagram. Do you think you can use a different GPIO pin? If you think you can, adjust the wiring and your code and see if you can still turn on the light.</p>
@@ -137,7 +153,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 3: Turn one LED light on and one LED light off with different GPIO Pins, using GPIO Pin 11 and GPIO Pin 13. </h2>
 			<p>1. Set up breadboard the same way as in Module 1 Exercise 2. Then add another resistor and LED light to the breadboard. Then add another male-to-female wire from GPIO Pin 13 to the second LED light. The circuit should look like the diagram shown below. Note: Use the same ground for both resistors.</p>
-			<div><div><%= image_tag ("gpio4.png") %></div></div>
+			<div><div><%= image_tag ("gpio4.png"), class: "pop-img" %></div></div>
 			<p>2. Open python file <code>ex1_3.py</code></p>
 			<p>3. Read directions in the python file and complete the exercise. Refer to the Module 1 Lesson & Syntax to know what syntax to use.</p>
 			<p>4. Save and run the python file. The first LED light (connected to GPIO Pin 11) should turn on for 5 seconds, while the second LED light (connected to GPIO Pin 13) should be off.</p>

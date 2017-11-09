@@ -4,7 +4,7 @@
 <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header" style="border: none;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
       </div>
       <div class="modal-body">
@@ -14,14 +14,6 @@
   </div>
 </div>
 
-<script type="text/javascript">
-$(function() {
-  	$('.pop-img').on('click', function() {
-		$('.enlargeImageModalSource').attr('src', $(this).attr('src'));
-		$('#enlargeImageModal').modal('show');
-	});
-});
-</script>
 
 <div class="col-md-4">
   <%= image_tag "gpio1.png", class: "pop-img", style: "width:100%" %>

@@ -110,7 +110,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 1: Have an LED light blink five times</h2>
 			<p>1. Set up the breadboard the same as Module 1, Exercise 2. The diagram is shown below:</p>
-			<div><div><%= image_tag "gpio3.png" %></div></div>
+			<div><div><%= image_tag "gpio3.png", class: "pop-img" %></div></div>
 			<p>2. Open ‘Module2’ folder and open python file <code>ex2_1.py</code></p>
 			<p>3. Follow the directions in the python file. Note: you will need to use <span class="code-text">Time.sleep(<span class="code">number</span>)</span> function in it.</p>
 			<p>4. Save and run the python file. The LED light should blink 5 times.</p>
@@ -128,7 +128,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 2: Have one LED light blink quickly first, and one LED light blink slowly after.</h2>
 			<p>1. Set up the breadboard the same way as Module 1, Exercise 3. You will need to use GPIO 11 and GPIO 13.</p>
-			<div><div><%= image_tag "gpio4.png" %></div></div>
+			<div><div><%= image_tag "gpio4.png", class: "pop-img" %></div></div>
 			<p>2. Open python file <code>ex2_2a.py</code></p>
 			<p>3. Follow the directions in the python file. Note to use two for loops. Refer to the Module 2 Lesson & Syntax for the syntax to create the for loops. Use the <span class="code-text">Time.sleep(<span class="code">number</span>)</span> command as you did before. </p>
 			<p>4. Save and run the python file. One LED light should blink 5 times, followed by the second LED light, which will also blink 5 times. One of the LED lights should blink faster than the other.</p>
@@ -176,5 +176,13 @@
 <br>
 <br>
 
-
+<!-- JavaScript for popup images -->
+<script type="text/javascript">
+$(function() {
+	$('.pop-img').on('click', function() {
+		$('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+		$('#enlargeImageModal').modal('show');
+	});
+});
+</script>
 

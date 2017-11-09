@@ -72,10 +72,10 @@
 			<ol>
 				<li>Now that the H-Bridge is confirmed to be working properly, detach all wires EXCEPT the ones attached to the motor with the electrical tape on it.</li>
 				<li>As done with motor A, thread the black wire through the copper lead on top, and the red wire through the lead on the bottom (as oriented in the diagram below) for each of the other motors and secure the wires with electrical tape.</li>
-				<div><%= image_tag ("motor1.png") %><%= image_tag ("motor2.jpg") %></div>
+				<div><%= image_tag ("motor1.png") %><%= image_tag ("motor2.jpg"), class: "pop-img" %></div>
 				<li>Secure all the motors onto the bottom chassis body. First, position the supports on the chassis and align it with the holes on the motor. Insert the screw through the support and through the motor. Use smaller bolts to secure the screw on the supports on the inner side of the motor. Repeat for each motor.</li>
-				<div>Outer side of motor:<%= image_tag ("motor3.jpg") %></div>
-				<div>Inner side of motor:<%= image_tag ("motor4.jpg") %></div>
+				<div>Outer side of motor:<%= image_tag ("motor3.jpg"), class: "pop-img" %></div>
+				<div>Inner side of motor:<%= image_tag ("motor4.jpg"), class: "pop-img" %></div>
 			</ol>
 		</div>
 	</div>
@@ -90,17 +90,16 @@
 			<h2 class="lesson-title gray">Step 2: </h2>
 			<p>Attach wires from motor to appropriate outputs on H-Bridge. (Explain how each set of outputs controls both motors)</p>
 			<p>To keep this project more simplistic, each pair of motors on each side of the car will share the same output ports on the H-Bridge and therefore receive the same signals from the Raspberry PiTM. However, because the motors are oriented to “face” each other on each side, the wires must be placed into the ports in an alternating manner to ensure that each pair of wheels will spin in the same direction. In addition, the H-Bridge should end up in the middle of all the motors as shown in the image below:</p>
-			<div><%= image_tag ("motor5.jpg") %></div>
+			<div>Left-side pair:<%= image_tag ("motor5.jpg"), class: "pop-img" %></div>
 			<ol>
-			<p>Left-side pair:</p>
 				<li>Twist the black wire from Motor A and red wire from Motor B together, and insert the intertwined wires into Output 1 on the H-Bridge.</li>
 				<li>Twist the red wire from Motor A and black wire from Motor B together, and insert the intertwined wires into Output 2 on the H-Bridge.</li>
-			<p>Right-side pair:</p>
+				<p>Right-side pair:</p>
 				<li>Twist the black wire from Motor C and red wire from Motor D together, and insert the intertwined wires into Output 3 on the H-Bridge.</li>
 				<li>Twist the red wire from Motor C and the black wire from Motor D together, and insert the intertwined wires into Output 4 on the H-Bridge.</li>
 			</ol>
 			<p>After the connections are complete, the resulting motors-to-H-Bridge set up should match the layout shown below:</p>
-			<div><%= image_tag ("motor6.png") %></div>
+			<div><%= image_tag ("motor6.png"), class: "pop-img" %></div>
 		</div>
 	</div>
 </div>
@@ -124,9 +123,9 @@
 			<p>5V –> GPIO PIN #2</p>
 			<p>GND –> GPIO PIN #6</p>
 			<p>Refer to the diagram below for diagram of the complete connections.</p>
-			<div><%= image_tag ("motor7.png") %></div>
+			<div><%= image_tag ("motor7.png"), class: "pop-img" %></div>
 			<p>The car should look like this at this point:</p>
-			<div><%= image_tag ("motor8.jpg") %></div>
+			<div><%= image_tag ("motor8.jpg"), class: "pop-img" %></div>
 		</div>
 	</div>
 </div>
@@ -140,7 +139,7 @@
 			<h2 class="lesson-title gray">Step 4: </h2>
 			<p>Complete building of car. Connect Raspberry PiTM to portable charger, which should turn on the Raspberry PiTM. Connect the battery pack to the H-Bridge as in Step 2A. Place batteries into the battery pack. Now the H-Bridge should turn on as well.</p>
 			<p>Use bronze rods to attach the top chassis, which holds the Raspberry PiTM and battery pack, to the bottom chassis, which holds the H-bridge and motors. Secure the rods using screws on both chasses.</p>
-			<div><%= image_tag ("motor9.jpg") %></div>
+			<div><%= image_tag ("motor9.jpg"), class: "pop-img" %></div>
 			<p>Attach all four wheels to the car.</p>
 			<p>Connect the RPi to the portable charger via the MicroUSB cord. This should automatically turn on the RPi, as designated by the green light and flashing red light. Place the 4 AA batteries into the battery pack, which should turn on the H-Bridge, designated by the red light.</p>
 		</div>
@@ -171,3 +170,12 @@
 <br>
 <br>
 
+<!-- JavaScript for popup images -->
+<script type="text/javascript">
+$(function() {
+	$('.pop-img').on('click', function() {
+		$('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+		$('#enlargeImageModal').modal('show');
+	});
+});
+</script>

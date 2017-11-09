@@ -12,6 +12,3 @@ function myFunction() {
     breadCrumb.classList.remove("sticky");
   }
 }
-
-// Pop up image
-

@@ -155,7 +155,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 1: Configure two buttons so when both are pressed simultaneously, both the LEDs light up</h2>
 			<p>1. Configure the breadboard to have two buttons and two LED lights. Each button should control an individual LED light.</p>
-			<div><div><%= image_tag ("logic1.png")%></div></div>
+			<div><div><%= image_tag ("logic1.png"), class: "pop-img" %></div></div>
 			<p>2. Open python file <code>ex5_1.py</code></p>
 			<p>3. Read the directions in red and complete the exercise. Note that GPIO Pin 11 takes an input from button 1 (at the top) and GPIO Pin 13 takes an input from button 2, which is below button 1.</p>
 			<p>Note: When button 1 is pressed, GPIO Pin 11 is True, which is referred to the variable <span class="code-text">button_state_1</span>. The variable <span class="code-text">button_state_1</span> refers to the state of the button 1: if the button is pressed then it will equal True, and if the button is not pressed, it will equal False. Same with variable <span class="code-text">button_state_2</span>, which refers to the state of button 2. GPIO Pin 15 and GPIO Pin 18 are connected to LED light 1 and LED light 2 respectively.  See diagram from step 1.</p>
@@ -176,7 +176,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 2: Configure two buttons so that when either is pressed, the LEDs lights up.</h2>
 			<p>1. Keep the same configuration on the breadboard as Module 5 Exercise 1.</p>
-			<div><div><%= image_tag ("logic1.png")%></div></div>
+			<div><div><%= image_tag ("logic1.png"), class: "pop-img" %></div></div>
 			<p>2. Open python file <code>ex5_2.py</code></p>
 			<p>3. Read the directions in the python file. The previous code from Module 5 Exercise 1 is set up for you, so add another <b>if/else</b> statement with an <b>Or</b> logic gate.</p>
 			<p>4. Save and run the python file. If either button is pressed, or both are pressed at the same time, then both LEDs should light up.</p>
@@ -195,7 +195,7 @@
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 3: Configure two buttons so that when neither are pressed, the LED lights up.</h2>
 			<p>1. Keep the same configuration on the breadboard as Module 5 Exercise 1.</p>
-			<div><div><%= image_tag ("logic1.png")%></div></div>
+			<div><div><%= image_tag ("logic1.png"), class: "pop-img" %></div></div>
 			<p>2. Open python file <code>ex5_3.py</code></p>
 			<p>3. Read the directions the python file. Remember that to use a <span class="code-text">Not</span> logic gate, it is not as easy as typing in the word “Not”. You must use the operator <span class="code-text">!=</span></p>
 			<p>4. Save and run the python file. The default state of the LED lights should be on. If either or both buttons are pressed, the LED lights should turn off.</p>
@@ -228,4 +228,12 @@
 <br>
 <br>
 
-
+<!-- JavaScript for popup images -->
+<script type="text/javascript">
+$(function() {
+	$('.pop-img').on('click', function() {
+		$('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+		$('#enlargeImageModal').modal('show');
+	});
+});
+</script>

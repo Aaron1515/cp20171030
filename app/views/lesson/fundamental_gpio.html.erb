@@ -172,17 +172,22 @@
 
 <!-- Excecise 3 -->
 <div class="custom-container">
-	<div class="primary-lesson-box">
+	<div class="primary-lesson-box final-box">
 		<div class="gray">
 		<h1 class='lesson-title center gray'>Time to celebrate.</h1>
 		<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Pat yourself on the back, give a classmate a high five!</p>
 		<p><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Check with the instructor you're good to proceed.</p>
 		</div>
+
+		<!-- buttons for next course -->
 		<div class="center">
-			<%= link_to "< Back to fundamentals", lesson_fundamental_path, class:"custom-btn btn-second-invert" %>
-			<%= link_to "Go to module 2 >", lesson_fundamental_loops_path, class:"custom-btn btn-second-invert" %>
-		</div>
-		<br>
+			<div class="final-btn">
+				<%= link_to "< Back to module 1", lesson_fundamental_path, class:"custom-btn btn-second-invert" %>
+			</div>
+			<div class="final-btn">
+				<%= link_to "Go to module 3 >", lesson_fundamental_loops_path, class:"custom-btn btn-second-invert"%>
+			</div>
+		</div><!-- end of buttons -->
 	</div>
 </div>
 

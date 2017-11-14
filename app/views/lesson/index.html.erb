@@ -1,4 +1,14 @@
+<!-- Bread Crumb -->
+<div class="sticky">
+	<ul class="breadcrumb" id="breadcrumb">
+	  <li><%= link_to "Home", root_path %></li>
+	  <li>Lessons</a></li>
+	</ul>
+</div>
+<!-- End of Bread Crumb -->
+<br>
 <!-- Fundamentals -->
+
 <div class="custom-container gray center">
 	<hr>
 	<h1>Fundamentals</h1>
@@ -23,30 +33,33 @@
 			</div>
 		<% end %>
 
-		
 		<!-- Module 2 -->
-		<div  class="each-mod">
-			<div>
-				<%= image_tag "300.png"%>
-			</div>
+		<%= link_to lesson_fundamental_loops_path do %>
+			<div  class="each-mod">
+				<div>
+					<%= image_tag "300.png"%>
+				</div>
 
-			<div>
-				<h2>Loops</h2>
-				<p>Understand the concept and application of a loop and how to use a For loop</p>
+				<div>
+					<h2>Loops</h2>
+					<p>Understand the concept and application of a loop and how to use a For loop</p>
+				</div>
 			</div>
-		</div>
+		<% end %>
 
 		<!-- Module 3 -->
-		<div class="each-mod">
-			<div>
-				<%= image_tag "300.png"%>
-			</div>
+		<%= link_to lesson_fundamental_comparison_path do %>
+			<div class="each-mod">
+				<div>
+					<%= image_tag "300.png"%>
+				</div>
 
-			<div>
-				<h2>Comparison Operators and Boolean Logic</h2>
-				<p>Learn how Booleans fit as a conditional statement and how to use comparison operators</p>
+				<div>
+					<h2>Comparison Operators and Boolean Logic</h2>
+					<p>Learn how Booleans fit as a conditional statement and how to use comparison operators</p>
+				</div>
 			</div>
-		</div>
+		<% end %>
 
 		<!-- Module 4 -->
 		<div class="each-mod">
@@ -76,7 +89,7 @@
 
 </div><!-- End of Fundamentals -->
 
-
+<br>
 <br>
 <br>
 

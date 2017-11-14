@@ -10,16 +10,18 @@
 	<div>
 		
 		<!-- Module 1 -->
-		<div  class="each-mod">
-			<div>
-				<%= image_tag "300.png"%>
-			</div>
+		<%= link_to lesson_fundamental_gpio_path do %>
+			<div  class="each-mod">
+				<div>
+					<%= image_tag "300.png"%>
+				</div>
 
-			<div>
-				<h2>GPIO Outputs</h2>
-				<p>Learn the basics of GPIO pin usage on Raspberry Pi and how to manipulate them with Python</p>
+				<div>
+					<h2>GPIO Outputs</h2>
+					<p>Learn the basics of GPIO pin usage on Raspberry Pi and how to manipulate them with Python</p>
+				</div>
 			</div>
-		</div>
+		<% end %>
 
 		
 		<!-- Module 2 -->

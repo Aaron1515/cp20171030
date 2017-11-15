@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 	get 'welcome/index'
 
+  get 'welcome/test'
+
   get 'contact/index'
 
   get 'resource/index'

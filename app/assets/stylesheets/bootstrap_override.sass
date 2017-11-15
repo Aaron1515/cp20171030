@@ -1,0 +1,29 @@
+@import "application.sass"
+
+li.dropdown.open
+
+	a.dropdown-toggle
+		border-radius: 4px 4px 0 0
+		background-color: white
+
+		span.caret
+			color: $primary-color-dark
+			border-width: 15px 5px 7px 5px
+			-ms-transform: rotate(180deg)
+			-webkit-transform: rotate(180deg)
+			transform: rotate(180deg)
+
+
+	lu
+		background-color: green
+
+li.dropdown
+	a.dropdown-toggle
+		span.caret
+			color: $primary-color-dark
+			border-width: 15px 5px 7px 5px
+			-webkit-transition: 1s ease-in-out
+			-moz-transition: 1s ease-in-out
+			-o-transition: 1s ease-in-out
+			transition: 1s ease-in-out
+

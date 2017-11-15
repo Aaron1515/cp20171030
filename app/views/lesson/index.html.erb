@@ -103,43 +103,50 @@
 <div class="custom-container index-box">
 
 	<div>
-		
+
 		<!-- Module 1 -->
-		<div  class="each-mod">
-			<div>
-				<%= image_tag "hbridge_motor.png"%>
-			</div>
+		<%= link_to lesson_robot_car_h_bridge_path do %>
+			<div  class="each-mod">
+				<div>
+					<%= image_tag "hbridge_motor.png"%>
+				</div>
 
-			<div>
-				<h2>Motor Control Using H-Bridge</h2>
-				<p>Learn the basics of how a H-Bridge works</p>
+				<div>
+					<h2>Motor Control Using H-Bridge</h2>
+					<p>Learn the basics of how a H-Bridge works</p>
+				</div>
 			</div>
-		</div>
+		<% end %>
 
-		
+
 		<!-- Module 2 -->
-		<div  class="each-mod">
-			<div>
-				<%= image_tag "motor6.png"%>
-			</div>
+		<%= link_to lesson_robot_car_motor_path do %>
+			<div  class="each-mod">
+				<div>
+					<%= image_tag "motor6.png"%>
+				</div>
 
-			<div>
-				<h2>Integrate Motor Control into Robot Car</h2>
-				<p>Understand how to control the car by using programming knownledge</p>
+				<div>
+					<h2>Integrate Motor Control into Robot Car</h2>
+					<p>Understand how to control the car by using programming knownledge</p>
+				</div>
 			</div>
-		</div>
+		<% end %>
+
 
 		<!-- Module 3 -->
-		<div class="each-mod">
-			<div>
-				<%= image_tag "function1.png"%>
-			</div>
+		<%= link_to lesson_robot_car_define_function_path do %>
+			<div class="each-mod">
+				<div>
+					<%= image_tag "function1.png"%>
+				</div>
 
-			<div>
-				<h2>Defining Functions</h2>
-				<p>Creating scripts to be used over and over</p>
+				<div>
+					<h2>Defining Functions</h2>
+					<p>Creating scripts to be used over and over</p>
+				</div>
 			</div>
-		</div>
+		<% end %>
 
 	</div>
 

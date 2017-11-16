@@ -257,10 +257,24 @@ ul.breadcrumb
 	-moz-box-shadow: gray 0 0 5px
 	box-shadow: gray 0 0 5px
 
+ul.breadcrumb:hover
+	-webkit-box-shadow: $primary-color-dark 0px 0 5px
+	-moz-box-shadow: $primary-color-dark 0 0 5px
+	box-shadow: $primary-color-dark 0 0 5px
+
+
 /* Display list items side by side */
 ul.breadcrumb li
 	display: inline
 	font-size: 15px
+	color: $soft-gray
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a 
+	text-decoration: none
+	color: $soft-gray
+	padding: 0px 0px 0px 0px
+
 
 /* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before
@@ -268,12 +282,13 @@ ul.breadcrumb li+li:before
 	color: black
 	content: "/\00a0"
 
-/* Add a color to all links inside the list */
-ul.breadcrumb li a 
-	color: #0275d8
-	text-decoration: none
 
 /* Add a color on mouse-over */
-ul.breadcrumb li a:hover 
-	color: #01447e
-	text-decoration: underline
+ul.breadcrumb li a:hover, ul.breadcrumb li a:focus
+	color: $soft-gray
+	border-bottom: 3px solid $primary-color-dark
+
+
+
+
+

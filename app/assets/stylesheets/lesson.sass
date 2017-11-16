@@ -1,5 +1,6 @@
 @import "application.sass"
 
+
 .index-title
 	a
 		font-size: 50px
@@ -10,7 +11,6 @@
 	a:hover
 		color: $soft-gray
 		text-decoration-color: $primary-color
-
 
 
 .index-box
@@ -226,5 +226,54 @@
 	width: 300px
 
 
+// Sticky
+
+.sticky
+	position: -webkit-sticky
+	position: sticky
+	top: 0
+	width: 85%
+	margin: 15px auto 0 auto
+	z-index: 2
 
 
+.sticky + .content
+	padding-top: 60px
+
+// End of Sticky
+
+
+
+/* breadcrumb */
+ul.breadcrumb
+	padding: 10px 16px
+	list-style: none
+	background-color: white
+	-webkit-border-radius: 7px
+	-moz-border-radius: 7px
+	border-radius: 7px
+
+	-webkit-box-shadow: gray 0px 0 5px
+	-moz-box-shadow: gray 0 0 5px
+	box-shadow: gray 0 0 5px
+
+/* Display list items side by side */
+ul.breadcrumb li
+	display: inline
+	font-size: 15px
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before
+	padding: 8px
+	color: black
+	content: "/\00a0"
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a 
+	color: #0275d8
+	text-decoration: none
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover 
+	color: #01447e
+	text-decoration: underline

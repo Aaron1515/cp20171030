@@ -1,0 +1,35 @@
+@import "application.sass"
+
+.custom-tooltip
+    position: relative
+    display: inline-block
+
+.custom-tooltip .custom-tooltiptext
+    visibility: hidden
+    width: 220px
+    background-color: #ade3d8
+    color: gray
+    text-align: left
+    border-radius: 6px
+    padding: 5px 10px
+    position: absolute
+    z-index: 1
+    top: 150%
+    right: 30%
+    margin-left: -60px
+    opacity: 0
+    transition: opacity 1s
+
+.custom-tooltip .custom-tooltiptext::after
+    content: ""
+    position: absolute
+    bottom: 100%
+    left: 50%
+    margin-left: 30%
+    border-width: 10px
+    border-style: solid
+    border-color: transparent transparent  #ade3d8 transparent
+
+.custom-tooltip:hover .custom-tooltiptext
+    visibility: visible
+    opacity: 1

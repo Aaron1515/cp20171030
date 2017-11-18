@@ -61,7 +61,7 @@
 	<h2>OVERVIEW</h2>
 	<div class="row">
 	  <div class="col-sm-6 col-md-5 col-lg-4">
-		  <%= image_tag "hbridge.png", class:"image-300" %>
+		  <%= image_tag "hbridge.png", style:"width:100%;margin-bottom:20px;" %>
 	  </div>
 	  <div class="col-sm-6 col-md-6 col-lg-8">
 	  	<div class="concept">
@@ -80,9 +80,16 @@
 					</div>
 	  		</div>
 	  	</div>
-	  		<p>In this project, we will be using <span class="color-primary"><b>DC motors</b></span>. Each motor is made up of a number of inductors, which move in a magnetic field. For our purposes, the function of the motors is to convert electrical energy into mechanical energy. The mechanical energy translates to the rotation of the wheels in your robot car. The speed of the rotation is proportional to the amount of current flowing through them, and in this project, we’ll be keeping the current constant, so the car would only be able to travel at a single speed.</p>
+	  		<p>In this project, we will be using <span class="custom-tooltip color-primary"><b>DC Motor</b><span class="custom-tooltiptext-down"><span class="bold">DC Motor </span>is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields.</span></span>. Each motor is made up of a number of inductors, which move in a magnetic field. For our purposes, the function of the motors is to convert electrical energy into mechanical energy. The mechanical energy translates to the rotation of the wheels in your robot car. The speed of the rotation is proportional to the amount of current flowing through them, and in this project, we’ll be keeping the current constant, so the car would only be able to travel at a single speed.</p>
 	  		<p>When a DC motor is hooked up to (+) wire on one lead and (-) wire on the other lead, the motor rotates a certain direction. When you switch the wires, the motor rotates in the opposite direction. In order to control the switching of “electric polarity” so the car is capable of moving forward and backward, the motors need to be connected to a motor controller called the H-Bridge.</p>
-	  		<p>The H-Bridge acts as the interface between the motors and your Raspberry Pi. It has four inputs (I1, I2, I3, and I4) and four outputs (O1, O2, O3, and O4). The inputs will connect to the Raspberry Pi GPIO pins, which the user can designate as True or False. The output ports will take in the motor leads, and send power to the motor as controlled by the<span class="color-primary"><b> GPIO Pins</b></span>.</p>
+	  		<p>The H-Bridge acts as the interface between the motors and your Raspberry Pi. It has four inputs (I1, I2, I3, and I4) and four outputs (O1, O2, O3, and O4). The inputs will connect to the Raspberry Pi GPIO pins, which the user can designate as True or False. The output ports will take in the motor leads, and send power to the motor as controlled by the
+	  			<span class="custom-tooltip color-primary">
+	  				<b> GPIO Pins</b>
+	  				<span class="custom-tooltiptext-up">
+	  					<span class="bold">General-purpose input/output (GPIO) </span>is a generic pin on an integrated circuit or computer board whose behavior—including whether it is an input or output pin—is controllable by the user at run time. GPIO pins have no predefined purpose, and go unused by default.
+	  				</span>
+	  			</span>.
+	  		</p>
 	  		<p></b>In this module, we will connect the motor, H-Bridge, and Raspberry Pi&trade; to correspond to the following <span class="color-third"><b> truth table</b></span>.</p>
 	  		<br>
 	  		<div class="center">

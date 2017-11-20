@@ -1,7 +1,17 @@
 <div class="head gray">
   <div class="parallax-head center">
-  	<h1 id="title-parallax"></h1>
-  	<p id="summaray-parallax"></p>
+  	<div class="text-editor-wrap">
+
+			<div class="title-bar">
+				<span class="title">CurricuPi@gmail.com — terminal — 80x<span class="terminal-height">10</span>
+				</span>
+			</div>
+
+			<div class="text-body">
+				$ <span id="typed1"></span>
+			</div>
+
+			</div>
   	<br>
 
   	<div class="center">
@@ -16,24 +26,69 @@
 </div>
 	
 <!-- Javascript for TypeScript	 -->
-<script type="text/javascript">
-	
-	$('#title-parallax').typeIt({
-	     strings: 'Affordable, Accessible & Hands-on',
-	     speed: 50,
-	     autoStart: false
-	});
+<style type="text/css">
 
-	var summaryDelay = function(){
-		$('#summaray-parallax').typeIt({
-			strings: 'We put together the modules & materials so you can focus on the students',
-			speed: 50,
-			autoStart: false
-		});
-	};
-	setTimeout(summaryDelay, 2000)
+/* text editor styles */
+	.text-editor-wrap {
+		display: block;
+		margin: auto;
+		max-width: 530px;
+		border-radius: 10px;
+		box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
+		clear: both;
+		overflow: hidden;
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+		transition: all 0.5s ease-out; 
+	}
 
+	.title-bar {
+		padding: 5px 0;
+		font-family: "Lucida Grande", sans-serif;
+		font-size: 0.75em;
+		text-align: center;
+		text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
+		background-color: #f8f8f8;
+		background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+		background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+		background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+		box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
+		border-bottom: #6a6a6a 1px solid; 
+	}
+
+
+	.text-body {
+		height: 250px;
+		background-color: rgba(0, 0, 0, 0.85);
+		padding: 10px;
+		color: #f0f0f0;
+		text-shadow: #000 0px 1px 0px;
+		font-family: "Consolas", "Courier New", "Courier";
+		font-size: 1.75em;
+		line-height: 1.40em;
+		font-weight: 500;
+		text-align: left;
+		overflow: hidden;
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+		transition: all 0.5s ease-out; 
+	}
+</style>
+
+
+
+<script type="text/javascript">	
+$('#typed1').typeIt({
+     strings: ['Affordable, Accessible & Hands-on', '$ We put together the modules & materials so you can focus on the students'],
+     speed: 50,
+     autoStart: false
+});
 </script>
+
 <!-- End of TypeScript -->
 
 

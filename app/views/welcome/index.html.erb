@@ -1,7 +1,7 @@
 <div class="head gray">
   <div class="parallax-head center">
-  	<h1>Affordable, Accessible & Hands-on</h1>
-  	<p>We put together the modules & materials so you can focus on the students</p>
+  	<h1 id="title-parallax"></h1>
+  	<p id="summaray-parallax"></p>
   	<br>
 
   	<div class="center">
@@ -15,6 +15,29 @@
   </div>
 </div>
 	
+<!-- Javascript for TypeScript	 -->
+<script type="text/javascript">
+	
+	$('#title-parallax').typeIt({
+	     strings: 'Affordable, Accessible & Hands-on',
+	     speed: 50,
+	     autoStart: false
+	});
+
+	var summaryDelay = function(){
+		$('#summaray-parallax').typeIt({
+			strings: 'We put together the modules & materials so you can focus on the students',
+			speed: 50,
+			autoStart: false
+		});
+	};
+	setTimeout(summaryDelay, 2000)
+
+</script>
+<!-- End of TypeScript -->
+
+
+
 <div class="parallax"></div>
 
 

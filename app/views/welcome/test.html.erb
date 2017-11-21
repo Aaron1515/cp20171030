@@ -1,12 +1,34 @@
+<div class="head gray">
+  <div class="parallax-head center">
 
-<div class="center">
-    
-<div class="custom-tooltip">DC Motor<span class="custom-tooltiptext"><span class="bold">DC Motor </span>is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields.</span>
-</div>
-</div>
+  	<div class="text-editor-wrap">
+			<div class="title-bar">
+				<span class="">CurricuPi@gmail.com — terminal — 80x<span class="terminal-height">10</span></span>
+			</div>
 
+			<div class="text-body">
+				<span class="terminal-green">pi@raspberrypi</span><span>:</span><span class="terminal-purple">~ $ </span><span id="typed1"></span>
+			</div>
+		</div><!-- End of typedit -->
+		
+		<br>
+		<br>
+		<br>
+  	<br>
 
+  	<div class="center">
+  		<div class="parllax-btn">
+		  	<%= link_to "LEARN MORE", about_what_we_offer_path, class: "custom-btn btn-fifth" %>
+  		</div>
+  		<div class="parllax-btn">
+		  	<%= link_to "CONTACT US", contact_index_path, class: "custom-btn btn-fifth-invert" %>
+  		</div>
+  	</div><!-- End of button -->
 
+  </div><!-- End of Parallax -->
+</div><!-- End of wrapper -->
+	
+<!-- Javascript for TypeScript	 -->
 <style type="text/css">
 
 /* text editor styles */
@@ -37,6 +59,7 @@
 		background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
 		box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
 		border-bottom: #6a6a6a 1px solid; 
+		color: black;
 	}
 
 
@@ -47,7 +70,7 @@
 		color: #f0f0f0;
 		text-shadow: #000 0px 1px 0px;
 		font-family: "Consolas", "Courier New", "Courier";
-		font-size: 1.75em;
+		font-size: 1.1em;
 		line-height: 1.40em;
 		font-weight: 500;
 		text-align: left;
@@ -60,24 +83,322 @@
 	}
 </style>
 
-<div class="text-editor-wrap">
 
-	<div class="title-bar">
-		<span class="title" style="color:gray">CurricuPi@gmail.com — terminal — 80x<span class="terminal-height">10</span>
-		</span>
-	</div>
-
-	<div class="text-body">
-		$ <span id="typed1"></span>
-	</div>
-
-</div>
 
 <script type="text/javascript">	
 $('#typed1').typeIt({
-     strings: ['Affordable, Accessible & Hands-on', '$ We put together the modules & materials so you can focus on the students'],
-     speed: 50,
+     speed: 100,
      autoStart: false
-});
+})
+.tiType('sudo python start_curricupi.py')
+.tiBreak()
+.tiSettings({speed: 0})
+.tiType('Loading')
+.tiSettings({speed: 100})
+.tiType('..................')
+.tiSettings({speed: 0})
+.tiType('Complete!')
+.tiBreak()
+.tiBreak()
+.tiPause(500)
+.tiSettings({speed: 50})
+.tiType('Affordable, Accessible & Hands-on')
+.tiBreak()
+.tiPause(2000)
+.tiSettings({speed: 50})
+.tiType('We put together the modules & materials so you can focus on the students')
+.tiPause(2000)
+.tiBreak()
+.tiBreak()
+.tiSettings({speed: 0})
+.tiType('<span class="terminal-green">pi@raspberrypi</span>:<span class="terminal-purple">~ $ </span>')
+;
 </script>
+
+<!-- End of TypeScript -->
+
+
+
+<div class="parallax"></div>
+
+
+<br>
+<br>
+
+
+<!-- 1 -->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-7 col-md-6 col-lg-6">
+			<%= image_tag "welcome1.png", class:"pop-up", style:"width:400px"  %>
+		</div>
+		<div class="col-sm-5 col-md-6 col-lg-6 gray">
+			<h3>Learn the Fundamentals</h3>
+			<p><b>Difficulty:</b> Beginner</p>
+			<p><b>Objective:</b> Introduce computer science fundamentals to students with no background in computer science through engaging activey-base modules with Rasberry Pi</p>
+			<p><b>Time:</b> 10 - 25 Hours</p>
+			<br>
+			<%= link_to "GO TO LESSON", lesson_fundamental_path, class: "custom-btn btn-fifth" %>
+		</div>	
+	</div>
+</div>
+
+<br>
+<br>
+
+
+<!-- 2 -->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-md-6 col-lg-6 gray">
+			<h3>Build a Robot Car</h3>
+			<p><b>Difficulty:</b> Intermediate</p>
+			<p><b>Objective:</b> Students will achieve a basic understanding of the fundamentals of robotics by observing how computer commands translate into physical movement using Python</p>
+			<p><b>Time:</b> 12 - 30 Hours</p>
+			<br>
+			<%= link_to "GO TO LESSON", lesson_robot_car_path, class: "custom-btn btn-fifth" %>
+		</div>	
+		<div class="col-sm-6 col-md-6 col-lg-6">
+			<%= image_tag "welcome2.png", class:"pop-up", style:"width:400px"  %>
+		</div>
+	</div>
+</div>
+
+
+<br>
+<br>
+
+
+<!-- 3 -->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-7 col-md-6 col-lg-6">
+			<%= image_tag "welcome3.png", class:"pop-up", style:"width:400px" %>
+		</div>
+		<div class="col-sm-5 col-md-6 col-lg-6 gray">
+			<h3>Build a Self Driving Robot Car</h3>
+			<p><b>Difficulty:</b> Advanced</p>
+			<p><b>Objective:</b> Build upon the Robot Car Lesson and add additional code to make the Robot Car autonomus.  Students will solidify their understading of Python</p>
+			<p><b>Time:</b> 15 - 35 Hours</p>
+			<br>
+			<%= link_to "GO TO LESSON", lesson_self_driving_car_path, class: "custom-btn btn-fifth" %>
+		</div>	
+	</div>
+</div>
+
+<br>
+<br>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="custom-container">
+  	<div class="row center">
+    	<div class="col-sm-4 col-md-4 col-xl-4">
+  		<div class="footer-title">Connect With Us</div>
+  		<br>
+  		<div>			
+				<!-- Add font awesome icons -->
+				<i><a href="#" class="fa fa-facebook"></a>
+				</i>
+				<a href="#" class="fa fa-instagram social-icon"></a>
+				<a href="#" class="fa fa-twitter social-icon"></a>	
+  		</div>
+			</div>
+
+			<div class="col-sm-4 col-md-4 col-xl-4">
+				<div class="footer-title">
+					Sign Up For Newsletter
+				</div>
+				<br>
+				<form class="form-horizontal">
+				  <div class="form-group">
+				    <div class="col-sm-12">
+				      <input type="text" class="form-control" id="email" placeholder="Enter name">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-12"> 
+				      <input type="email" class="form-control" id="pwd" placeholder="Enter email">
+				    </div>
+				  </div>
+				  <div class="form-group"> 
+				    <div class="col-sm-offset-2 col-sm-8">
+				      <button type="submit" class="custom-btn btn-subscribe">Subscribe</button>
+				    </div>
+				  </div>
+				</form>
+			</div>
+
+			<div class="col-sm-4 col-md-4 col-xl-4">
+				<div class="footer-title">Our Company</div>
+				<ul class="col-sm-6 footer-info">
+					<li><%= link_to "Github", ("https://github.com/CurricuPi")%></li>
+					<li><%= link_to "FAQ", about_faq_path %></li>
+					<li><%= link_to "Contact Us", contact_index_path %></li>
+				</ul>
+				<ul class="col-sm-6 footer-info">
+					<li><%= link_to "What We Offer", about_what_we_offer_path %></li>
+					<li><%= link_to "Who We Are", about_who_we_are_path %></li>
+					<li><%= link_to "In The News", ("http://richmondstandard.com/2017/07/11/chevron-engineers-help-make-coding-fun-at-richmond-high/"), target: :_blank %></li>
+				</ul>
+			</div>
+		</div>
+  </div>
+
+  <!-- Login hidden button -->
+  <div>
+  	<span href="#signup" data-toggle="modal" data-target=".bs-modal-sm">&nbsp;&nbsp;&nbsp;&copy;&nbsp;</span>CurricuPi 2017
+  </div>
+  <!-- End of hidden button -->
+</div> <!-- End of Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+    <br>
+    <div class="bs-example bs-example-tabs">
+			<ul id="myTab" class="nav nav-tabs">
+				<li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+				<li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+				<li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+			</ul>
+		</div>
+		<div class="modal-body">
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade in" id="why">
+        	<p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+        	<br>
+        	<p>Please contact <a mailto:href="curricupi@gmail.com"></a>curricupi@gmail.com</a> for any other inquiries.</p>
+        </div>
+        <div class="tab-pane fade active in" id="signin">
+				<form class="form-horizontal">
+					<fieldset>
+					<!-- Sign In Form -->
+					<!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Alias:</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="JoeSixpack" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                  Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div>
+          </fieldset>
+				</form>
+			</div>
+
+			<div class="tab-pane fade" id="signup">
+				<form class="form-horizontal">
+					<fieldset>
+					<!-- Sign Up Form -->
+					<!-- Text input-->
+					<div class="control-group">
+						<label class="control-label" for="Email">Email:</label>
+						<div class="controls">
+							<input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">
+						</div>
+					</div>
+            
+					<!-- Text input-->
+					<div class="control-group">
+						<label class="control-label" for="userid">Alias:</label>
+						<div class="controls">
+							<input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+						</div>
+					</div>
+            
+					<!-- Password input-->
+					<div class="control-group">
+						<label class="control-label" for="password">Password:</label>
+						<div class="controls">
+							<input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+							<em>1-8 Characters</em>
+						</div>
+					</div>
+            
+          <!-- Text input-->
+          <div class="control-group">
+            <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+            <div class="controls">
+              <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+            </div>
+          </div>
+            
+          <!-- Multiple Radios (inline) -->
+          <br>
+          <div class="control-group">
+            <label class="control-label" for="humancheck">Humanity Check:</label>
+            <div class="controls">
+              <label class="radio inline" for="humancheck-0">
+                <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
+              <label class="radio inline" for="humancheck-1">
+                <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+            </div>
+          </div>
+            
+          <!-- Button -->
+          <div class="control-group">
+            <label class="control-label" for="confirmsignup"></label>
+            <div class="controls">
+              <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+            </div>
+          </div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<center>
+		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	</center>
+</div>
+
+</div>
 

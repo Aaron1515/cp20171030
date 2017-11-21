@@ -7,7 +7,7 @@
 			</div>
 
 			<div class="text-body">
-				<span class="terminal-green">pi@raspberrypi: </span><span id="typed1" class="code"></span>
+				<span class="terminal-green">pi@raspberrypi</span><span>:</span><span class="terminal-purple">~ $ </span><span id="typed1"></span>
 			</div>
 		</div><!-- End of typedit -->
 		
@@ -87,10 +87,32 @@
 
 <script type="text/javascript">	
 $('#typed1').typeIt({
-     strings: ['Affordable, Accessible & Hands-on', '<span class="terminal-green">pi@raspberrypi: </span> We put together the modules & materials so you can focus on the students'],
-     speed: 60,
+     speed: 100,
      autoStart: false
-});
+})
+.tiType('sudo python start_curricupi.py')
+.tiBreak()
+.tiSettings({speed: 0})
+.tiType('Loading')
+.tiSettings({speed: 100})
+.tiType('..................')
+.tiSettings({speed: 0})
+.tiType('Complete!')
+.tiBreak()
+.tiBreak()
+.tiPause(500)
+.tiSettings({speed: 50})
+.tiType('Affordable, Accessible & Hands-on')
+.tiBreak()
+.tiPause(2000)
+.tiSettings({speed: 50})
+.tiType('We put together the modules & materials so you can focus on the students')
+.tiPause(2000)
+.tiBreak()
+.tiBreak()
+.tiSettings({speed: 0})
+.tiType('<span class="terminal-green">pi@raspberrypi</span>:<span class="terminal-purple">~ $ </span>')
+;
 </script>
 
 <!-- End of TypeScript -->

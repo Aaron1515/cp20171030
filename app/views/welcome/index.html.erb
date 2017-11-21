@@ -7,7 +7,7 @@
 			</div>
 
 			<div class="text-body">
-				<span class="terminal-green">pi@raspberrypi</span><span>:</span><span class="terminal-purple">~ $ </span><span id="typed1"></span>
+				$ <span id="typed1"></span>
 			</div>
 		</div><!-- End of typedit -->
 		
@@ -70,7 +70,7 @@
 		color: #f0f0f0;
 		text-shadow: #000 0px 1px 0px;
 		font-family: "Consolas", "Courier New", "Courier";
-		font-size: 1.1em;
+		font-size: 1.75em;
 		line-height: 1.40em;
 		font-weight: 500;
 		text-align: left;
@@ -87,32 +87,10 @@
 
 <script type="text/javascript">	
 $('#typed1').typeIt({
-     speed: 100,
+     strings: ['Affordable, Accessible & Hands-on', '$ We put together the modules & materials so you can focus on the students'],
+     speed: 60,
      autoStart: false
-})
-.tiType('sudo python start_curricupi.py')
-.tiBreak()
-.tiSettings({speed: 0})
-.tiType('Loading')
-.tiSettings({speed: 100})
-.tiType('..................')
-.tiSettings({speed: 0})
-.tiType('Complete!')
-.tiBreak()
-.tiBreak()
-.tiPause(500)
-.tiSettings({speed: 50})
-.tiType('Affordable, Accessible & Hands-on')
-.tiBreak()
-.tiPause(2000)
-.tiSettings({speed: 50})
-.tiType('We put together the modules & materials so you can focus on the students')
-.tiPause(2000)
-.tiBreak()
-.tiBreak()
-.tiSettings({speed: 0})
-.tiType('<span class="terminal-green">pi@raspberrypi</span>:<span class="terminal-purple">~ $ </span>')
-;
+});
 </script>
 
 <!-- End of TypeScript -->
@@ -194,22 +172,16 @@ $('#typed1').typeIt({
   <div class="custom-container">
   	<div class="row center">
     	<div class="col-sm-4 col-md-4 col-xl-4">
-  		<div class="footer-title">Connect With Us</div>
-  		<br>
-  		<div>			
+  		<div class="connect-with-us">Connect With Us</div>
 				<!-- Add font awesome icons -->
 				<i><a href="#" class="fa fa-facebook"></a>
 				</i>
 				<a href="#" class="fa fa-instagram social-icon"></a>
 				<a href="#" class="fa fa-twitter social-icon"></a>	
-  		</div>
 			</div>
 
-			<div class="col-sm-4 col-md-4 col-xl-4">
-				<div class="footer-title">
-					Sign Up For Newsletter
-				</div>
-				<br>
+			<div class="col-sm-4 col-md-4 col-xl-4 news-letter-text">
+				Sign Up Newsletter
 				<form class="form-horizontal">
 				  <div class="form-group">
 				    <div class="col-sm-12">
@@ -230,7 +202,6 @@ $('#typed1').typeIt({
 			</div>
 
 			<div class="col-sm-4 col-md-4 col-xl-4">
-				<div class="footer-title">Our Company</div>
 				<ul class="col-sm-6 footer-info">
 					<li><%= link_to "Github", ("https://github.com/CurricuPi")%></li>
 					<li><%= link_to "FAQ", about_faq_path %></li>

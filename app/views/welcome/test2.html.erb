@@ -1,20 +1,47 @@
 <h1>Test 2</h1>
 
+	<!-- Each team member 1-->
+	<div class="custom-container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+			
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<%= image_tag "vivien.png", class:"pop-up team-pic"  %>
+						</div>
+						<div class="back">
+							<%= image_tag "vivien.png", style:"width:50%;float:left;margin:5px;"%>
+							<span>a sdfas asd fas dfa asdfasdf</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h3 class="team-member-name">Vivien Macnguyen</h3>
+				<p><i>Co-Founder</i></p>
+				<p></p>
+				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/vivien-macnguyen/", target: :_blank %>
+			</div>	
+		</div>
+	</div>
+
+
+
 
 
 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 	<div class="flipper">
 		<div class="front">
-			<%= image_tag "300.png" %>
+			<%= image_tag "vivien.png", class:"pop-up team-pic"  %>
 			front 
 		</div>
 		<div class="back">
-			<%= image_tag "300.png" %>
-			back stuff
+			<%= image_tag "300.png", style:"width:50%;float:left;margin:5px;"%>
+			<span>a sdfas asd fas dfa asdfasdf</span>
 		</div>
 	</div>
 </div>
-
 
 <style type="text/css">
 

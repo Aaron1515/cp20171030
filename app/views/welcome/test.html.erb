@@ -28,17 +28,19 @@
 	<!-- Each team member 1-->
 	<div class="custom-container">
 		<div class="row">
-			<div class="col-sm-6 col-md-6 col-lg-6">
+			<div class="col-sm-6 col-md-6 col-lg-6"">
 				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 					<div class="flipper">
 						<div class="front">
 							<div class="v300">
-							<%= image_tag "vivien.png", class:"pop-up full" %>
+								<div class="h400">
+									<%= image_tag "vivien.png", class:"pop-up full" %>
+								</div>
 							</div>
 						</div>
 						<div class="back">
-							<%= image_tag "vivien.png", class:"pop-up",style:"width:50%;float:left;margin:5px 10px 0px 0px;"%>
-							<p>books on Book Adventure to earn points toward the prizes you can find in the Prize Library! Search by title, author last name, or ISBN to find quizzes for the books you've read. The quizzes for kindergarten – grade 2 books will have five books on Book Adventure to earn points toward the prizes you can find in the Prize Library! Search by title, author last name, or </p>
+							<%= image_tag "vivien.png", class:"pop-up mini-me"%>
+							<p>Process Engineer at Chevron by Day, Women in tech at night.</p>
 						</div>
 					</div>
 				</div>
@@ -67,7 +69,23 @@
 				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/athwang/", target: :_blank %>
 			</div>	
 			<div class="col-sm-6 col-md-6 col-lg-6">
-				<%= image_tag "albert.jpg", class:"pop-up team-pic" %>
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "albert.jpg", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "albert.jpg", class:"pop-up mini-me" %>
+							<p>Process Engineer at Chevron by Day,  entrepreneur at night.</p>
+						</div>
+					</div>
+				</div>
+					
+				</div>
 			</div>
 		</div>
 	</div>
@@ -80,7 +98,21 @@
 	<div class="custom-container">
 		<div class="row">
 			<div class="col-sm-6 col-md-6 col-lg-6">
-				<%= image_tag "aaron.jpg", class:"pop-up team-pic" %>
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "aaron.jpg", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "aaron.jpg", class:"pop-up mini-me"%>
+							<p style="margin: 5px;">Software Engineer by trade, biker by . . weekend?</p>
+						</div>
+					</div>
+				</div>		
 			</div>
 			<div class="col-sm-6 col-md-6 col-lg-6">
 				<h3 class="team-member-name">Aaron Hu</h3>
@@ -106,7 +138,21 @@
 				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/jose-luis-cebri%C3%A1n-m%C3%A1rquez-a9827748/", target: :_blank %>
 			</div>	
 			<div class="col-sm-6 col-md-6 col-lg-6">
-				<%= image_tag "jose.jpg", class:"pop-up team-pic" %>
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "jose.jpg", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "jose.jpg", class:"pop-up",style:"width:50%;float:left;margin:5px 10px 0px 0px;"%>
+							<p> </p>
+						</div>
+					</div>
+				</div>			
 			</div>
 		</div>
 	</div>
@@ -118,7 +164,21 @@
 	<div class="custom-container">
 		<div class="row">
 			<div class="col-sm-6 col-md-6 col-lg-5">
-				<%= image_tag "stephanie.jpg", class:"pop-up team-pic" %>
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "stephanie.jpg", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "stephanie.jpg", class:"pop-up",style:"width:50%;float:left;margin:5px 10px 0px 0px;"%>
+							<p> </p>
+						</div>
+					</div>
+				</div>			
 			</div>
 			<div class="col-sm-6 col-md-6 col-lg-5">
 				<h3 class="team-member-name">Stephanie Wang</h3>
@@ -131,52 +191,3 @@
 	<hr>
 
 </div>
-
-
-
-<style type="text/css">
-
-
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000px;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	width: 300px;
-	height: 300px;
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-}
-</style>

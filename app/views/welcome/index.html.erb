@@ -7,7 +7,7 @@
 			</div>
 
 			<div class="text-body">
-				$ <span id="typed1"></span>
+				 <span id="typed1"></span>
 			</div>
 		</div><!-- End of typedit -->
 		
@@ -87,10 +87,13 @@
 
 <script type="text/javascript">	
 $('#typed1').typeIt({
-     strings: ['Affordable, Accessible & Hands-on', '$ We put together the modules & materials so you can focus on the students'],
-     speed: 60,
+     speed: 20,
      autoStart: false
-});
+})
+.tiType('Affordable, Accessible & Hands-on')
+.tiBreak()
+.tiBreak()
+.tiType('We put together the modules & materials so you can focus on the students');
 </script>
 
 <!-- End of TypeScript -->

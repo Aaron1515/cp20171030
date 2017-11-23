@@ -48,13 +48,13 @@ RSpec.describe Subscriber, type: :model do
 	  end
 
 
-	 #  it "is valid with valid attributes" do
-	 #    subject_2
-	 #    expect(subject_2).to be_valid
-	 #  end
+	  it "is valid with only email attributes" do
+	    subject_3
+	    expect(subject_3).to be_valid
+	  end
 
-		# it "is not valid without note" do
-	 #    expect(subject).to_not be_valid
+		# it "is not valid without email" do
+	 #    expect(subject_2).to_not be_valid
 	 #  end
 
 	 #  it "create a valid entry" do

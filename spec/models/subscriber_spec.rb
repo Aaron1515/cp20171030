@@ -109,7 +109,7 @@ RSpec.describe Subscriber, type: :model do
 			expect(Subscriber.count).to eq 1
 	  end
 
-	  it "invalid with email - case senstive" do
+	  it "invalid with same email - case senstive" do
 			subject_2.email = "John.doe@mail.com"
 			subject_2.save
 			subject_5
@@ -122,8 +122,18 @@ RSpec.describe Subscriber, type: :model do
 	  end
 
 	  it "has invalid email format" do
-	  	Subscriber.create(email: "notreal@fake.con")
-	  	expect(Subscriber.count).to eq 1
+	  	Subscriber.create(email: "notreal@fake")
+	  	expect(Subscriber.count).to eq 0
+	  end
+
+	  it "is longer than 3 char" do
+	  	Subscriber.create(email: ".com")
+	  	expect(Subscriber.count).to eq 0
+	  end
+
+	  it "is shorter than 100 char" do
+	  	Subscriber.create(email: "hi" * 50 + "@mail.com")
+	  	expect(Subscriber.count).to eq 0
 	  end
 
 	end

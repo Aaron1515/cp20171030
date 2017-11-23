@@ -19,6 +19,5 @@
 # Ignore Env file.
 .env
 
-# Ignore all data base files + models
 /db/*
 /app/models/*

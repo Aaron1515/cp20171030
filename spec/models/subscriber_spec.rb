@@ -140,8 +140,8 @@ RSpec.describe Subscriber, type: :model do
 
 	describe "Association Test" do
 
-		it "has many activities" do
-			test = Subscriber.reflect_on_association(:activities)
+		it "has many infos" do
+			test = Subscriber.reflect_on_association(:infos)
 			expect(test.macro).to eq(:has_many)
 		end
 

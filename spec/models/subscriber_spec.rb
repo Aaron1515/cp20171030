@@ -116,6 +116,16 @@ RSpec.describe Subscriber, type: :model do
 			expect(Subscriber.count).to eq 1
 	  end
 
+	  it "has valid email format" do
+	  	Subscriber.create(email: "real@email.con")
+	  	expect(Subscriber.count).to eq 1
+	  end
+
+	  it "has invalid email format" do
+	  	Subscriber.create(email: "notreal@fake.con")
+	  	expect(Subscriber.count).to eq 1
+	  end
+
 	end
 
 	describe "Association Test" do

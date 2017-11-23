@@ -21,4 +21,4 @@
 
 # Ignore all data base files + models
 /db/*
-/models/*
+/app/models/*

@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-user = Subscriber.create(name: "simon", email: "simon@mail.com")
+user = Subscriber.create(name: "aaron", email: "aaron@mail.com")
 
-Activity.create(note: "added subscriber", subscriber_id: user.id)
+b = Activity.create(note: "added subscriber")
+b.update_attribute(:info, user)

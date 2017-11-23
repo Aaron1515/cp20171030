@@ -17,10 +17,11 @@ ActiveRecord::Schema.define(version: 20171122080301) do
 
   create_table "activities", force: :cascade do |t|
     t.text     "note"
-    t.integer  "subscriber_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["subscriber_id"], name: "index_activities_on_subscriber_id", using: :btree
+    t.string   "info_type"
+    t.integer  "info_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["info_type", "info_id"], name: "index_activities_on_info_type_and_info_id", using: :btree
   end
 
   create_table "subscribers", force: :cascade do |t|

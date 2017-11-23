@@ -1,6 +1,6 @@
 class Subscriber < ApplicationRecord
 
-	has_many :activities
+	has_many :infos, class_name: 'Activity', foreign_key: 'info_id'
 
 	validates :email, presence: true, uniqueness: { case_sensitive: false },:length => { minimum: 3, maximum: 100 }
 

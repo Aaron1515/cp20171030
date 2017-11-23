@@ -1,5 +1,5 @@
 class Activity < ApplicationRecord
 
-	belongs_to :subscriber
+	belongs_to :info, polymorphic: true
 
 end

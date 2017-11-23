@@ -1,4 +1,0 @@
-user = Subscriber.create(name: "simon", email: "simon@mail.com", activities_id: new_activity_id = Activity.create(note: "added subscriber, name: joe, email: joe@mail.com").id)
-new_activity = Activity.find(new_activity_id)
-
-new_activity.update!(subscribers_id: user.id)

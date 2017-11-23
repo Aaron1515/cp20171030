@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+user = Subscriber.create(name: "simon", email: "simon@mail.com")
+
+Activity.create(note: "added subscriber", subscriber_id: user.id)

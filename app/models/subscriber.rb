@@ -1,7 +1,7 @@
 class Subscriber < ApplicationRecord
 
-	has_and_belongs_to_many :activities
+	has_many :activities
 
-	validates :email, :presence => true
+	# validates :email, :presence => true
 
 end

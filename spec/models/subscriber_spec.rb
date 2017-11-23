@@ -57,42 +57,46 @@ RSpec.describe Subscriber, type: :model do
 	    expect(subject_2).to_not be_valid
 	  end
 
-	 #  it "create a valid entry" do
-	 #    work = subject_3
-	 #    expect(work).to be_valid
-	 #  end
+	  it "create a valid entry with email and name" do
+	    work = subject_5
+	    expect(work).to be_valid
+	  end
 
-	 #  it "save 1 entry" do
-	 #    subject_2.save
-	 #    expect(Subscriber.count).to eq 1
-	 #  end
+	  it "save 1 entry" do
+	    subject_3.save
+	    expect(Subscriber.count).to eq 1
+	  end
 
-	 #  it "save 2 entry" do
-	 #    subject_1.note = "success"
-	 #    subject_1.save
-	 #    work = Subscriber.new(note: "test2")
-	 #    work.save
-	 #    expect(Subscriber.count).to eq 2
-	 #  end
+	  it "save 2 entry" do
+	    subject_1.email = "john.doe@mail.com"
+	    subject_1.save
+	    work = Subscriber.new(email: "jane.doe@mail.com")
+	    work.save
+	    expect(Subscriber.count).to eq 2
+	  end
 
-	 #  it "save 1 entry & create 1 entry" do
-	 #    subject_1.note = "success"
-	 #    subject_1.save
-	 #    work2 = Subscriber.create(note: "John successfully logged in.")
-	 #    expect(Subscriber.count).to eq 2
-	 #  end
+	  it "save 1 entry & create 1 entry" do
+	    subject_1.email = "john.doe@mail.com"
+	    subject_1.save
+	    work2 = Subscriber.create(email: "jane.doe@mail.com")
+	    expect(Subscriber.count).to eq 2
+	  end
 
-	 #  it "create 2 entry, only saving 1" do
-		# 	subject_1.save
-		# 	subject_3
-	 #    expect(Subscriber.count).to eq 1
-	 #  end
+	  it "create 2 entry, only saving 1" do
+			subject_1.save
+			subject_5
+	    expect(Subscriber.count).to eq 1
+	  end
 
-	 #  it "expect 1st entry's note to have equal 'success' " do
-	 #    subject_3
-	 #    expect(Subscriber.all.first.note).to eq("successful")
-	 #  end
+	  it "expect 1st entry's name to have equal 'John Doe" do
+	    subject_5
+	    expect(Subscriber.all.first.name).to eq("John Doe")
+	  end
 
+	  it "expect 1st entry's email to have equal 'john.doe@mail.com " do
+	    subject_5
+	    expect(Subscriber.all.first.email).to eq("john.doe@mail.com")
+	  end
 
 	end
 

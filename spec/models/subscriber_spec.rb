@@ -5,8 +5,8 @@ RSpec.describe Subscriber, type: :model do
 
 	let(:subject_1) { Subscriber.new }
 	let(:subject_2) { Subscriber.new(name: "John Doe") }
-	let(:subject_3) { Subscriber.new(email: "john.doe@email.com") }
-	let(:subject_4) { Subscriber.new(name: "John Doe", email: "john.doe@email.com") }
+	let(:subject_3) { Subscriber.new(email: "john.doe@mail.com") }
+	let(:subject_4) { Subscriber.new(name: "John Doe", email: "john.doe@mail.com") }
 	let(:subject_5)	{ Subscriber.create(name: "John Doe", email: "john.doe@mail.com") }
 
 
@@ -103,6 +103,18 @@ RSpec.describe Subscriber, type: :model do
 	  end
 
 
+	  it "invalid with same email" do
+			subject_5
+			subject_5
+			expect(Subscriber.count).to eq 1
+	  end
+
+	  it "invalid with email - case senstive" do
+			subject_2.email = "John.doe@mail.com"
+			subject_2.save
+			subject_5
+			expect(Subscriber.count).to eq 1
+	  end
 
 	end
 

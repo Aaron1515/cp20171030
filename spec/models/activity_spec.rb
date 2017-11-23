@@ -89,8 +89,9 @@ RSpec.describe Activity, type: :model do
 
 	describe "Association Test" do
 
-		it "" do
-
+		it "should have and belongs to many subscribers" do
+			test = Activity.reflect_on_association(:subscribers)
+			expect(test.macro).to eq(:has_and_belongs_to_many)
 		end
 
 	end

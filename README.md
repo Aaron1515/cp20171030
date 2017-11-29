@@ -37,13 +37,13 @@ Site map v2
 
 ![Site Map](planning/site_map_02.png "Site Map v.01")
 
-Schema v2
+Schema v3
 
-![Schema](planning/schema_02.png "Schema v.02")
+![Schema](planning/schema_03.png "Schema v.02")
 
 
 Prototype Site
-[Prototype Link](https://curricupi.herokuapp.com/)
+[Prototype Link](https://curricupi-test.herokuapp.com/)
 
 Example
 [Prototype Link](https://projects.invisionapp.com/share/KBDYHVQC9#/screens/258391130)

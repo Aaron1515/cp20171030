@@ -104,7 +104,7 @@
 <div class="custom-container gray">
 	<div class="second-lesson-box">
 		<div class="gray">
-			<h2 class='lesson-title gray'>asdfasdfasf ==</h2>
+			<h2 class='lesson-title gray'>Exercise 1: asdfas dfa</h2>
 			<p>1. asdfasdfasfasf</p>
 			<div><%= image_tag ("comparison1.png")%></div>
 			<p>2. Open nano file <code>ex3_1.py</code></p>
@@ -186,16 +186,21 @@
 <br>
 
 <!-- Final -->
+<!-- Final -->
 <div class="custom-container">
-	<div class="primary-lesson-box">
+	<div class="primary-lesson-box final-box">
 		<div class="gray">
 		<h1 class='lesson-title center gray'>Time to celebrate.</h1>
 		<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Pat yourself on the back, give a classmate a high five!</p>
 		<p><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Check with the instructor you're good to proceed.</p>
 		</div>
 		<div class="center">
-			<%= link_to "< Lessons", root_path, class:"custom-btn btn-second-invert" %>
-			<%= link_to "Go to module 1 >", lesson_fundamental_gpio_path, class:"custom-btn btn-second-invert" %>
+			<div class="final-btn">
+				<%= link_to "< Lesson", lesson_fundamental_path, class:"custom-btn btn-second-invert" %>
+			</div>
+			<div class="final-btn">
+				<%= link_to "Go to Module 1 >", lesson_fundamental_path, class:"custom-btn btn-second-invert"%>
+			</div>
 		</div>
 	</div>
 </div>

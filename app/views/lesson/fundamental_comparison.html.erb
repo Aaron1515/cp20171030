@@ -67,16 +67,16 @@
 	<div class="primary-lesson-box">
 		<div class="gray">
 			<h1 class='lesson-title center gray'>Lesson & Syntax</h1>
-			<p>Booleans are objects used in programming that are either True or False. A True Boolean can result from true comparisons, or simply by typing ‘True’ or ‘1’. A False Boolean can result from false comparisons, or simply by typing ‘False’ or ‘0’.<p>
-			<p>For example, the comparison 2 == 2 is true, so the Boolean resulting from that comparison is True. However, the comparison 2 == 3 is false, so the Boolean resulting from that comparison is False.</p>
-			<p>The while loop will only execute if the condition it takes in is a True Boolean.</p>
+			<p>Booleans are objects used in programming that are either <span class="code-text">True</span> or <span class="code-text">False</span>. A true boolean can result from true comparisons, or simply by typing ‘<span class="code-text">true</span>’ or ‘<span class="code-text">1</span>’. A False Boolean can result from false comparisons, or simply by typing ‘<span class="code-text">False</span>’ or ‘<span class="code-text">0</span>’.<p>
+			<p>For example, the statement <span class="code-text">2 == 2</span> is true, so the resulting boolean is True. Let's look at another example, the statement <span class="code-text">2 == 3</span> is false, the number two is not equal to the number three so the resulting boolean is False.</p>
+			<p>The while loop will only execute if the [while condition] it takes in is a true boolean.</p>
 			<p>Syntax for the while loop is as follows:</p>
 			<p><pre class="image-300" style="margin-left: 20px">while <span class="code">[while condition]</span>:<br />	<span class="code">[conditional code]</span></pre></p>
 			<p>For example, the code below will continuously print “Hello!” for as long as 1 == 1 (which is always true).</p>
 			<p><pre class="image-300" style="margin-left: 20px">while 1 == 1:<br />	print “Hello!”</pre></p>
 			<p>The following code is equivalent to the one above:</p>
 			<p><pre class="image-300" style="margin-left: 20px">while True:<br />	print “Hello!”</pre></p>
-			<p>*If you ran the code above, you will be stuck in an infinite loop.  You could break out of it by pressing <b>CTRL+C</b>.</p>
+			<p>*If you run the code above, you would be stuck in an infinite loop.  You can break out of it by pressing <b>CTRL+C</b>.</p>
 		</div>
 	</div>
 </div>
@@ -142,7 +142,7 @@
 	<div class="second-lesson-box">
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 1: Using the comparison operator ==</h2>
-			<p>1. Set up breadboard the same way as in Module 1, Exercise 2:</p>
+			<p>1. Set up the breadboard the same way as in Module 1, Exercise 2:</p>
 			<div><div><%= image_tag ("gpio3.png"), class:"pop-img" %></div></div>
 			<p>2. Open the ‘Module3’ folder and open python file <code>ex3_1.py</code></p>
 			<p>3. Enter a true statement (such as <span class="code-text">1+1 == 2</span>) for the while condition. Remember to use the == sign, which is an equal sign for comparisons, whereas the = sign is to assign variables which we will cover in a later exercise.</p>
@@ -165,14 +165,14 @@
 	<div class="second-lesson-box">
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 2: Using the comparison operator !=</h2>
-			<p>1. Keep bread board set up the same as in Module 3 Exercise 1.</p>
+			<p>1. Keep the breadboard set up the same as in Module 3 Exercise 1.</p>
 			<div><div><%= image_tag ("gpio3.png"), class:"pop-img" %></div></div>
 			<p>2. Open python file <code>ex3_2.py</code></p>
 			<p>3. See directions in the python file. Enter a true statement using the <span class="code-text">not equal to</span> comparison operator, <span class="code-text">!=</span>  (Example: <span class="code-text">1+3 != 2</span>) for the while condition.</p>
 			<p>4. Save and run the python file. Your LED light should start blinking if your conditional statement is <b>True</b>.</p>
 			<p>5. <b>CTRL+C</b> to stop your code</p>
 			<p>6. Run python code <code>cleanup.py</code> to set your GPIO pins back to default state.</p>
-			<p>7. Go back to nano file <code>ex3_2.py</code> and try entering a false statement, such as <span class="code-text">1+3 == 2</span></p>
+			<p>7. Go back to the python file <code>ex3_2.py</code> and try entering a false statement, such as <span class="code-text">1+3 == 2</span></p>
 			<p>8. Save and run your python file. Your light should not turn on, because the while loop will not activate.</p>
 			<p>9. Try entering other true statements, using the != operator in the condition. Make sure to run the python code cleanup.py to set your GPIO pins back to default state each time.</p>
 		</div>
@@ -187,7 +187,7 @@
 	<div class="second-lesson-box">
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 3: Using the comparison operator > and <</h2>
-			<p>1. Keep bread board set up the same as in Module 3 Exercise 1.</p>
+			<p>1. Keep the breadboard set up the same as in Module 3 Exercise 1.</p>
 			<div><div><%= image_tag ("gpio3.png"), class:"pop-img" %></div></div>
 			<p>2. Open python file <code>ex3_3.py</code></p>
 			<p>3. See directions in the python file. Enter a true statement using the greater than comparison operator, > (example: 3 > 2) for thSave and run the python code. Your LED light should start blinking if your conditional statement is <code>True</code></p>
@@ -209,7 +209,7 @@
 	<div class="second-lesson-box">
 		<div class="gray">
 			<h2 class='lesson-title gray'>Exercise 4: Assigning variables and comparing them</h2>
-			<p>1. Keep bread board set up the same as in Module 3 Exercise 1.</p>
+			<p>1. Keep the breadboard set up the same as in Module 3 Exercise 1.</p>
 			<div><div><%= image_tag ("gpio3.png"), class:"pop-img" %></div></div>
 			<p>2. Open python file <code>ex3_4.py</code></p>
 			<p>3. See directions in the python file. Assign variable <span class="code-text">x</span> to be <span class="code-text">2</span> and variable y to be <span class="code-text">1+1</span></p>

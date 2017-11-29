@@ -1,0 +1,100 @@
+<h1>Test 2</h1>
+
+<style type="text/css">
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.h300{
+	height: 300px;
+}
+
+.v300{
+	width: 300px;
+}
+</style>
+
+	<!-- Each team member 1-->
+	<div class="custom-container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<%= image_tag "vivien.png", class:"pop-up team-pic"  %>
+						</div>
+						<div class="back">
+							<%= image_tag "vivien.png", style:"width:50%;float:left;margin:5px;"%>
+							<span>a sdfas asd fas dfa asdfasdf</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h3 class="team-member-name">Vivien Macnguyen</h3>
+				<p><i>Co-Founder</i></p>
+				<p></p>
+				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/vivien-macnguyen/", target: :_blank %>
+			</div>	
+		</div>
+	</div>
+
+
+
+
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<%= image_tag "vivien.png", class:"pop-up team-pic"  %>
+			front 
+		</div>
+		<div class="back">
+			<%= image_tag "300.png", style:"width:50%;float:left;margin:5px;"%>
+			<span>a sdfas asd fas dfa asdfasdf</span>
+		</div>
+	</div>
+</div>
+

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
 	get 'welcome/index'
-
   get 'welcome/test'
+  get 'welcome/test1'
+  get 'welcome/test2'
+  get 'welcome/a_test'
+  get 'welcome/v_test'
 
   get 'contact/index'
 
@@ -35,6 +38,9 @@ Rails.application.routes.draw do
 
   get 'download/robot_car'
   get 'download/fundamental'
+
+
+  resources :subscribers
 
   root 'welcome#index'
 

@@ -1,83 +1,193 @@
+<div class="custom-container gray">
+	
+	<h1 class="center">Who We Are</h1>
+	<br>
+	<br>
+	<h3 class="center">Our Mission</h3>
 
-<div class="center">
-    
-<div class="custom-tooltip">DC Motor<span class="custom-tooltiptext"><span class="bold">DC Motor </span>is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields.</span>
+
+	<div class="image-background-container">
+  	<%= image_tag "who_we_are1.png", class:"full-width" %>
+  	<div class="center-text-inimage">
+  		<h3>Inspire youth to be creator of technoloy</h3>
+  	</div>
+  </div>
+
+	<p>Our curriculums integrate low-cost and easy-to-learn hardware such as the Raspberry Pi&trade; with software applications to break down complex subjects into simple pieces and encourage creativity through project-based learning. CurricuPi aims to tackle the gap in STEM education around computer science and prepare youth for the changing workforce. To achieve this, we seek to improve accessibility to high-impact technology courses so that anybody can develop skills in problem-solving, critical thinking, and reasoning through hands-on programming activities and tinkering. 
+	</p>
+
+	<br>
+	<br>
 </div>
-</div>
 
+<div class="custom-container gray">
+	<div><h2>Our Team</h2></div>
 
+	<br>
 
-<style type="text/css">
-
-/* text editor styles */
-	.text-editor-wrap {
-		display: block;
-		margin: auto;
-		max-width: 530px;
-		border-radius: 10px;
-		box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
-		clear: both;
-		overflow: hidden;
-		-webkit-transition: all 0.5s ease-out;
-		-moz-transition: all 0.5s ease-out;
-		-ms-transition: all 0.5s ease-out;
-		-o-transition: all 0.5s ease-out;
-		transition: all 0.5s ease-out; 
-	}
-
-	.title-bar {
-		padding: 5px 0;
-		font-family: "Lucida Grande", sans-serif;
-		font-size: 0.75em;
-		text-align: center;
-		text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
-		background-color: #f8f8f8;
-		background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
-		background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
-		background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
-		box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
-		border-bottom: #6a6a6a 1px solid; 
-	}
-
-
-	.text-body {
-		height: 250px;
-		background-color: rgba(0, 0, 0, 0.85);
-		padding: 10px;
-		color: #f0f0f0;
-		text-shadow: #000 0px 1px 0px;
-		font-family: "Consolas", "Courier New", "Courier";
-		font-size: 1.75em;
-		line-height: 1.40em;
-		font-weight: 500;
-		text-align: left;
-		overflow: hidden;
-		-webkit-transition: all 0.5s ease-out;
-		-moz-transition: all 0.5s ease-out;
-		-ms-transition: all 0.5s ease-out;
-		-o-transition: all 0.5s ease-out;
-		transition: all 0.5s ease-out; 
-	}
-</style>
-
-<div class="text-editor-wrap">
-
-	<div class="title-bar">
-		<span class="title" style="color:gray">CurricuPi@gmail.com — terminal — 80x<span class="terminal-height">10</span>
-		</span>
+	<!-- Each team member 1-->
+	<div class="custom-container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-6"">
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "vivien.png", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "vivien.png", class:"pop-up mini-me"%>
+							<p>Process Engineer at Chevron by day, women in tech by night.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h3 class="team-member-name">Vivien Macnguyen</h3>
+				<p><i>Co-Founder</i></p>
+				<p></p>
+				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/vivien-macnguyen/", target: :_blank %>
+			</div>	
+		</div>
 	</div>
+	<hr>
 
-	<div class="text-body">
-		$ <span id="typed1"></span>
+	<br>
+	<br>
+
+
+<!-- Each team member 2-->
+	<div class="custom-container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h3 class="team-member-name">Albert Hwang</h3>
+				<p><i>Co-Founder</i></p>
+				<p></p>
+				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/athwang/", target: :_blank %>
+			</div>	
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "albert.jpg", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "albert.jpg", class:"pop-up mini-me" %>
+							<p>Process Engineer at Chevron by day,  entrepreneur by night.</p>
+						</div>
+					</div>
+				</div>
+					
+				</div>
+			</div>
+		</div>
 	</div>
+	<hr>
+
+	<br>
+	<br>
+
+	<!-- Each team member 3-->
+	<div class="custom-container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "aaron.jpg", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "aaron1.jpg", class:"pop-up mini-me"%>
+							<p>Software Engineer by trade, biker and super nerd by passion.</p>
+						</div>
+					</div>
+				</div>		
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h3 class="team-member-name">Aaron Hu</h3>
+				<p><i>Software Engineer, Collabrator</i></p>
+				<p></p>
+				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/aaron1515/", target: :_blank %>
+			</div>	
+		</div>
+	</div>
+	<hr>
+
+	<br>
+	<br>
+
+
+	<!-- Each team member 4-->
+	<div class="custom-container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h3 class="team-member-name">Jose Luis Cebrian Marquez</h3>
+				<p><i>Collabrator, engineering teacher at Richmond High</i></p>
+				<p></p>
+				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/jose-luis-cebri%C3%A1n-m%C3%A1rquez-a9827748/", target: :_blank %>
+			</div>	
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "jose.jpg", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "jose.jpg", class:"pop-up mini-me" %>
+							<p> </p>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
+	<hr>
+	<br>
+	<br>
+
+<!-- Each team member 5-->
+	<div class="custom-container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-5">
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="v300">
+								<div class="h400">
+									<%= image_tag "stephanie.jpg", class:"pop-up full" %>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<%= image_tag "stephanie.jpg", class:"pop-up",style:"width:50%;float:left;margin:5px 10px 0px 0px;"%>
+							<p> </p>
+						</div>
+					</div>
+				</div>			
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-5">
+				<h3 class="team-member-name">Stephanie Wang</h3>
+				<p><i>UI & UX Designer</i></p>
+				<p></p>
+				<%= link_to image_tag("linkedin_logo.png", :alt => "Image Description", style: "height: 50px"), "https://www.linkedin.com/in/hellostephwang/", target: :_blank %>
+			</div>	
+		</div>
+	</div>
+	<hr>
 
 </div>
-
-<script type="text/javascript">	
-$('#typed1').typeIt({
-     strings: ['Affordable, Accessible & Hands-on', '$ We put together the modules & materials so you can focus on the students'],
-     speed: 50,
-     autoStart: false
-});
-</script>
-

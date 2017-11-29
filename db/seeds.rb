@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-user = Subscriber.create(name: "aaron", email: "aaron@mail.com")
-
-b = Activity.create(note: "added subscriber")
-b.update_attribute(:info, user)
+20.times do |i|
+	user = Subscriber.create(name: "aaron"+i.to_s, email: "aaron" + i.to_s+ "@mail.com")
+		b = Activity.create(note: "added subscriber")
+		b.update_attribute(:info, user)
+end

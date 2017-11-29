@@ -29,11 +29,17 @@ class SubscribersController < ApplicationController
 
     respond_to do |format|
       if @subscriber.save
-        format.html { redirect_to @subscriber, notice: 'Subscriber was successfully created.' }
-        format.json { render :show, status: :created, location: @subscriber }
+        format.html do
+          flash[:success] = 'You have successfully subscribed.'
+          redirect_to root_path
+        end
+        # format.json { render :show, status: :created, location: @subscriber }
       else
-        format.html { render :new }
-        format.json { render json: @subscriber.errors, status: :unprocessable_entity }
+        format.html do
+          flash[:error] = 'Oops! Something went wrong.'
+          redirect_to root_path
+        end
+        # format.json { render json: @subscriber.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,11 +49,17 @@ class SubscribersController < ApplicationController
   def update
     respond_to do |format|
       if @subscriber.update(subscriber_params)
-        format.html { redirect_to @subscriber, notice: 'Subscriber was successfully updated.' }
-        format.json { render :show, status: :ok, location: @subscriber }
+        format.html do
+          flash[:success] = 'Subscriber was successfully updated.'
+          redirect_to subscribers_path
+        end
+        # format.json { render :show, status: :ok, location: @subscriber }
       else
-        format.html { render :edit }
-        format.json { render json: @subscriber.errors, status: :unprocessable_entity }
+        format.html do
+          flash[:error] = "It didn't update.  Try again."
+          render :edit
+        end
+        # format.json { render json: @subscriber.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -57,8 +69,11 @@ class SubscribersController < ApplicationController
   def destroy
     @subscriber.destroy
     respond_to do |format|
-      format.html { redirect_to subscribers_path, notice: 'Subscriber was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html do
+        flash[:success] = "Subscriber was successfully deleted."
+        redirect_to subscribers_path
+      end
+      # format.json { head :no_content }
     end
   end
 

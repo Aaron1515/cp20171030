@@ -1,3 +1,4 @@
+
 <div class="head gray">
   <div class="parallax-head center">
 
@@ -175,36 +176,30 @@ $('#typed1').typeIt({
   <div class="custom-container">
   	<div class="row center">
     	<div class="col-sm-4 col-md-4 col-xl-4">
-  		<div class="connect-with-us">Connect With Us</div>
+  		<div class="news-letter-text">Connect With Us</div>
 				<!-- Add font awesome icons -->
-				<i><a href="#" class="fa fa-facebook"></a>
-				</i>
-				<a href="#" class="fa fa-instagram social-icon"></a>
-				<a href="#" class="fa fa-twitter social-icon"></a>	
+				<div style="margin-top: 5px">
+					<i><a href="#" class="fa fa-facebook"></a></i>
+					<i><a href="#" class="fa fa-instagram social-icon"></a></i>
+					<i><a href="#" class="fa fa-twitter social-icon"></a>	</i>
+				</div>
 			</div>
 
-			<div class="col-sm-4 col-md-4 col-xl-4 news-letter-text">
-				Sign Up Newsletter
-				<form class="form-horizontal">
-				  <div class="form-group">
-				    <div class="col-sm-12">
-				      <input type="text" class="form-control" id="email" placeholder="Enter name">
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <div class="col-sm-12"> 
-				      <input type="email" class="form-control" id="pwd" placeholder="Enter email">
-				    </div>
-				  </div>
-				  <div class="form-group"> 
-				    <div class="col-sm-offset-2 col-sm-8">
-				      <button type="submit" class="custom-btn btn-subscribe">Subscribe</button>
-				    </div>
-				  </div>
-				</form>
-			</div>
 
 			<div class="col-sm-4 col-md-4 col-xl-4">
+				<div class="news-letter-text">Sign up for newsletter</div>
+				<%= form_for @subscriber, url: {controller: "subscribers", action: "create"}, html: {class: "form-horizontal subscribe-form"} do |f| %>
+				  <%= f.text_field :name , class: "form-control", placeholder: "Enter name" %>
+				  <%= f.text_field :email, class: "form-control", placeholder: "Enter email" %>
+				  <%= f.submit "Subscribe", class: "custom-btn btn-subscribe" %>
+				<% end %>
+			</div>
+
+
+
+
+			<div class="col-sm-4 col-md-4 col-xl-4">
+				<div class="news-letter-text">Our Company</div>
 				<ul class="col-sm-6 footer-info">
 					<li><%= link_to "Github", ("https://github.com/CurricuPi")%></li>
 					<li><%= link_to "FAQ", about_faq_path %></li>

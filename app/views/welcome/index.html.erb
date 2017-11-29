@@ -191,7 +191,7 @@ $('#typed1').typeIt({
 				<%= form_for @subscriber, url: {controller: "subscribers", action: "create"}, html: {class: "form-horizontal subscribe-form"} do |f| %>
 				  <%= f.text_field :name , class: "form-control", placeholder: "Enter name" %>
 				  <%= f.text_field :email, class: "form-control", placeholder: "Enter email" %>
-				  <%= f.submit "Subscribe", class: "custom-btn btn-subscribe" %>
+				  <%= f.submit "Subscribe", class: "custom-btn btn-subscribe", disabled: true %>
 				<% end %>
 			</div>
 

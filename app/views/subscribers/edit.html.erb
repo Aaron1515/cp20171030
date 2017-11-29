@@ -1,6 +1,15 @@
 <h1>Editing Post</h1>
 
-<%= render 'form', subscriber: @subscriber %>
+
+
+<%= form_for @subscriber, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :email %>
+  <%= f.submit "Update" %>
+<% end %>
+
+
+
 
 <%= link_to 'Show', @subscriber %> |
 <%= link_to 'Back', subscribers_path %>

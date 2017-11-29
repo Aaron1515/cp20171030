@@ -1,3 +1,6 @@
+<% if false %>\
+
+
 <%= form_with(model: subscriber, local: true) do |form| %>
   <% if subscriber.errors.any? %>
     <div id="error_explanation">
@@ -24,4 +27,14 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+<% end %>
+
+<% end %>
+
+
+
+<%= form_for @subscriber, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :email %>
+  <%= f.submit "Create" %>
 <% end %>

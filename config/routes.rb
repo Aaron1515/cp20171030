@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-
-  authenticated :user do
-    root to: 'subscribers#index', as: :authenticated_root
+  devise_for :admins, :skip => [:registrations] 
+  as :admin do
+    get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
+    put 'admins' => 'devise/registrations#update', :as => 'admin_registration'
   end
+
+
+  devise_for :users
 
 	get 'welcome/index'
   get 'welcome/test'

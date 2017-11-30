@@ -87,6 +87,10 @@
 			          </ul>
 			        </li>
 			        <li><%= link_to "Contact Us", contact_index_path %></li>
+			        <!-- Sign out if signed_in -->
+			        <% if user_signed_in? %>
+  						<li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+  						<% end %>
 
 			      </ul>
 			    </div><!-- /.navbar-collapse -->

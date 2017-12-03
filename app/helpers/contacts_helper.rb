@@ -1,7 +1,7 @@
 module ContactsHelper
 	def cut_off(arg="none")
 		if arg == nil
-			return
+			arg = "none"
 		end
 		if arg.size > 60
 			return arg[0..60]+"....."

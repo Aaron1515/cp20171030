@@ -6,10 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-20.times do |i|
-	user = Subscriber.create(name: "aaron"+i.to_s, email: "aaron" + i.to_s+ "@mail.com")
-		b = Activity.create(note: "added subscriber")
-		b.update_attribute(:info, user)
+5.times do |i|
+	subscriber = Subscriber.create(name: "aaron"+i.to_s, email: "aaron" + i.to_s+ "@mail.com")
+	b = Activity.create(note: "added new subscriber")
+	b.update_attribute(:info, subscriber)
 end
 
-Admin.create(password: "password", email: "aaron@aaron.com")
+5.times do |i|
+	contact = Contact.create(name: "aaron"+i.to_s, email: "aaron" + i.to_s+ "@mail.com", organization: "School", comment: "This is a test.")
+	b = Activity.create(note: "added new contact")
+	b.update_attribute(:info, contact)
+end
+
+
+
+Admin.create(password: "password1", email: "aaron@aaron.com")
+Admin.create(password: "password1", email: "hello.stephwang@gmail.com")
+Admin.create(password: "password1", email: "vivien.macnguyen@gmail.com")
+Admin.create(password: "password1", email: "alb.t.hwang@gmail.com")

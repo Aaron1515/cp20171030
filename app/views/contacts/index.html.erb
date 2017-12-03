@@ -25,7 +25,7 @@
   </thead>
 
   <tbody>
-    <% @contacts.each do |contact| %>
+    <% @contacts.reverse.each do |contact| %>
       <tr>
         <td><%= contact.name %></td>
         <td><%= contact.email %></td>

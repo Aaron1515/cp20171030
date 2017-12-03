@@ -22,7 +22,7 @@
   </thead>
 
   <tbody>
-    <% @subscribers.each do |subscriber| %>
+    <% @subscribers.reverse.each do |subscriber| %>
       <tr>
         <td><%= subscriber.name %></td>
         <td><%= subscriber.email %></td>

@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="center">Contacts</h1>
+<br>
+<br>
+<br>
+
+<div class="custom-container">
+  <%= link_to 'Manual Add', new_contact_path, class: "custom-btn btn-primary-invert" %>
+  <br>
+  <br>
+  <br>
+  
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>School/Orgination</th>
+      <th>Comment</th>
+      <th>Status</th>
+      <th>Note</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.name %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.organization %></td>
+        <td><%= contact.comment %></td>
+        <td><%= contact.status %></td>
+        <td><%= contact.note %></td>
+        <td><%= link_to 'Info', contact %></td>
+        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+        <td><%= link_to 'Remove', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+

@@ -1,0 +1,38 @@
+<h1 class="center">Contact Info</h1>
+
+
+<div class="custom-container">
+	
+<p>
+  <strong>Name:</strong>
+  <br>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <br>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong>Organization/School:</strong>
+  <br>
+  <%= @contact.organization %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <br>
+  <%= @contact.status %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <br>
+  <%= @contact.note %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
+</div>

@@ -11,3 +11,5 @@
 		b = Activity.create(note: "added subscriber")
 		b.update_attribute(:info, user)
 end
+
+Admin.create(password: "password", email: "aaron@aaron.com")

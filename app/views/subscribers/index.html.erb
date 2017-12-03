@@ -11,7 +11,7 @@
   <br>
   <br>
   
-<table class="table">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -29,7 +29,7 @@
         <td><%= subscriber.active %></td>
         <td><%= link_to 'Info', subscriber %></td>
         <td><%= link_to 'Edit', edit_subscriber_path(subscriber) %></td>
-        <td><%= link_to 'Delete', subscriber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Remove', subscriber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

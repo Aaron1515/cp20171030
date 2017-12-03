@@ -1,12 +1,30 @@
-<h1>Editing Subscriber</h1>
+<h1 class="center">Editing Subscriber</h1>
 
+<br>
+<br>
+<br>
 
-
+<div class="custom-container" style="width: 300px">
+	
 <%= form_for @subscriber, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_field :email %>
-  <%= f.check_box :active %>
-  <%= f.submit "Update" %>
+	<div class="form-group">
+		<%= f.label "Name:" %>
+	  <%= f.text_field :name, class: "form-control" %>
+	</div>
+ 
+ 	<div class="form-group">
+	  <%= f.label "Email:" %>
+	  <%= f.text_field :email, class: "form-control" %>
+ 	</div>
+
+	<div class="form-group">
+		<%= f.label "Active?" %>
+		<%= f.check_box :active %>
+	</div>
+ 	
+ 	<div class="form-group">
+  	<%= f.submit "Update", class: "btn-submit"%>
+ 	</div>
 <% end %>
 
 
@@ -14,3 +32,4 @@
 
 <%= link_to 'Show', @subscriber %> |
 <%= link_to 'Back', subscribers_path %>
+</div>

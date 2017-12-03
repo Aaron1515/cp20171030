@@ -30,9 +30,9 @@
         <td><%= contact.name %></td>
         <td><%= contact.email %></td>
         <td><%= contact.organization %></td>
-        <td><%= contact.comment %></td>
+        <td><%= cut_off(contact.comment) %></td>
         <td><%= contact.status %></td>
-        <td><%= contact.note %></td>
+        <td><%= cut_off(contact.note) %></td>
         <td><%= link_to 'Info', contact %></td>
         <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
         <td><%= link_to 'Remove', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>

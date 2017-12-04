@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   get 'welcome/a_test'
   get 'welcome/v_test'
 
-  get 'contact/index'
-
   get 'resource/index'
   get 'resource/guide'
   get 'resource/trouble'
@@ -41,6 +39,7 @@ Rails.application.routes.draw do
 
 
   resources :subscribers
+  resources :contacts
 
   root 'welcome#index'
 

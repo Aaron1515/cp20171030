@@ -5,6 +5,7 @@
 <%= form_for @subscriber, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
   <%= f.text_field :name %>
   <%= f.text_field :email %>
+  <%= f.check_box :active %>
   <%= f.submit "Update" %>
 <% end %>
 

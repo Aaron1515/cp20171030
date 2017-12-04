@@ -1,10 +1,14 @@
-<h1>Editing Post</h1>
+<h1 class="center">Editing Post</h1>
+<br><br><br>
 
-
-
+<div class="custom-container">
+	
 <%= form_for @subscriber, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
+	<%= f.label :name %>
   <%= f.text_field :name %>
+  <%= f.label :email %>
   <%= f.text_field :email %>
+  <%= f.label :active %>
   <%= f.check_box :active %>
   <%= f.submit "Update" %>
 <% end %>
@@ -14,3 +18,4 @@
 
 <%= link_to 'Show', @subscriber %> |
 <%= link_to 'Back', subscribers_path %>
+</div>

@@ -48,7 +48,7 @@ class SubscribersController < ApplicationController
   # PATCH/PUT /subscribers/1.json
   def update
     respond_to do |format|
-      if @subscriber.update(subscriber_params)
+      if @subscriber.update(subscriber_update_params)
         format.html do
           flash[:success] = 'Subscriber was successfully updated.'
           redirect_to subscribers_path
@@ -86,6 +86,10 @@ class SubscribersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscriber_params
       params.require(:subscriber).permit(:name, :email)
+    end
+
+    def subscriber_update_params
+      params.require(:subscriber).permit(:name, :email, :active)
     end
 
 end

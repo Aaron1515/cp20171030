@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  devise_for :users, except: :registrations
+  devise_for :users, :skip => [:registrations] 
     as :user do
       get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
       put 'users' => 'devise/registrations#update', :as => 'user_registration'
     end
 
-  devise_for :admins, except: :registrations
+  devise_for :admins, :skip => [:registrations] 
     as :admin do
       get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
       put 'admins' => 'devise/registrations#update', :as => 'admin_registration'

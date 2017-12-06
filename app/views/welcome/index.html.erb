@@ -247,7 +247,7 @@ $('#typed1').typeIt({
     <br>
     <div class="bs-example bs-example-tabs">
 			<ul id="myTab" class="nav nav-tabs">
-				<li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+				<li class="active"><a href="#signin" data-toggle="tab">User</a></li>
 				<li class=""><a href="#signup" data-toggle="tab">Admin</a></li>
 				<li class=""><a href="#why" data-toggle="tab">Why?</a></li>
 			</ul>
@@ -259,46 +259,46 @@ $('#typed1').typeIt({
         	<br>
         	<p>Please contact <a mailto:href="curricupi@gmail.com"></a>curricupi@gmail.com</a> for any other inquiries.</p>
         </div>
+
+
         <div class="tab-pane fade active in" id="signin">
-				<form class="form-horizontal">
-					<fieldset>
-					<!-- Sign In Form -->
-					<!-- Text input-->
-            <div class="control-group">
-              <label class="control-label" for="userid">Alias:</label>
-              <div class="controls">
-                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="JoeSixpack" class="input-medium" required="">
-              </div>
-            </div>
+				<!-- Start of user Sign In -->
+				<%= form_for(:user, :url => session_path(:user), class: "form-horizontal") do |f| %>
+					<div class="control-group">
+						<%= f.label "Email:", class: "control-label" %>
+						<div class="controls">
+							<%= f.text_field :email, class: "form-control" %>
+						</div>
+					</div>
+					<div class="control-group">
+						<%= f.label "Password:", class: "control-label" %>
+						<div class="controls">
+							<%= f.password_field :password, class: "form-control" %>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<%= f.check_box :remember_me %>
+						<%= f.label "Remember Me:", class: "control-label" %>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+						  <%= f.submit 'Sign in', class: "btn-submit" %>
+						</div>
+					</div>
+					<!-- No password reset -->
+					<% if false %>
+				  <%= link_to "Forgot your password?", new_password_path(:user) %>
+				  <% end %><!-- End of password reset -->
+				<% end %>
+				<!-- End of user Sign in -->
 
-            <!-- Password input-->
-            <div class="control-group">
-              <label class="control-label" for="passwordinput">Password:</label>
-              <div class="controls">
-                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
-              </div>
-            </div>
 
-            <!-- Multiple Checkboxes (inline) -->
-            <div class="control-group">
-              <label class="control-label" for="rememberme"></label>
-              <div class="controls">
-                <label class="checkbox inline" for="rememberme-0">
-                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
-                  Remember me
-                </label>
-              </div>
-            </div>
 
-            <!-- Button -->
-            <div class="control-group">
-              <label class="control-label" for="signin"></label>
-              <div class="controls">
-                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
-              </div>
-            </div>
-          </fieldset>
-				</form>
+
+
+
 			</div>
 
 			<div class="tab-pane fade" id="signup">

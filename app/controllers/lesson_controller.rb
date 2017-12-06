@@ -7,7 +7,6 @@ class LessonController < ApplicationController
   end
 
   def fundamental_getting_started
-    
   end
 
   def fundamental_gpio

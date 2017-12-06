@@ -4,13 +4,25 @@
 <div class="custom-container">
 	
 <%= form_for @subscriber, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
-	<%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.label :active %>
-  <%= f.check_box :active %>
-  <%= f.submit "Update" %>
+
+	<div class="form-group">
+		<%= f.label :name %>
+	  <%= f.text_field :name, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :email %>
+	  <%= f.text_field :email, class: "form-control" %>
+	</div>
+	<div class="form-group">
+	  <%= f.label :active %>
+	  <%= f.check_box :active %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.submit "Update", class: "btn-submit" %>
+	</div>
+
 <% end %>
 
 

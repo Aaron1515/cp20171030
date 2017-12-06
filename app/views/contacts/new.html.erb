@@ -1,45 +1,11 @@
-<h1 class="center">Contact Us</h1>
+<h1 class="center gray">Contact Us</h1>
 
-<div class="custom-container">
-<% if false %>
-<%= render 'form', contact: @contact %>
-<%= link_to 'Back', contacts_path %>
-<% end %>
-
+<div class="custom-container gray">
+  <div>Fill out the form below to inquire more about CurricuPi and receive updates about our work. If you are interested in our curriculum kits, please note this in the general comment box below.
+  </div>
 </div>
 
 <div class="custom-container gray">
-	<h1>This page is currently under construction. Please send us your questions or comments to curricupi@gmail.com, Thank You.</h1>
-	<h1>Contact Us</h1>
-</div>
-
-
-<div class="custom-container gray">
-	<div>Fill out the form below to subscribe to CurricuPi and receive updates about our work. If you are interested in our curriculum kits, please note this in the general comment box below.
-	</div>
-</div>
-
-<br>
-<br>
-
-<div class="custom-container gray">
-	<form>
-	  <div class="form-group">
-	    <label for="formGroupExampleInput">Name</label>
-	    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Name">
-	  </div>
-	  <div class="form-group">
-	    <label for="formGroupExampleInput2">Email</label>
-	    <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="name@domain.edu">
-	  </div>
-	  <div class="form-group">
-	    <label for="formGroupExampleInput2">School/Organization</label>
-	    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Richmond High....">
-	  </div>
-	  <div class="form-group">
-	    <label for="formGroupExampleInput2">General Questions or Comments</label>
-	    <textarea type="text" class="form-control" id="formGroupExampleInput2" rows="5" placeholder="Questions or comments"></textarea> 
-	  </div>
-	  <button class="custom-btn btn-fifth" style="float: right;" disabled>Submit</button>
-	</form>
+	<%= render 'form', contact: @contact %>
+	<!-- <%= link_to 'Back', contacts_path %> -->
 </div>

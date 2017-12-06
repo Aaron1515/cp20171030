@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    # @contacts = Contact.all
+    @contacts = Contact.all
   end
 
   # GET /contacts/1
@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
-    # @contact = Contact.new
+    @contact = Contact.new
   end
 
   # GET /contacts/1/edit
@@ -29,10 +29,10 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         format.html { redirect_to root_path, notice: 'Your information was successfully sent.' }
-        format.json { render :show, status: :created, location: @contact }
+        # format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        # format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
   end

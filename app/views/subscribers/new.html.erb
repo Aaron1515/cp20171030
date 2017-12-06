@@ -1,5 +1,11 @@
-<h1>New subscriber</h1>
+<h1 class="center gray">New subscriber</h1>
+<br>
+<br>
+<div class="custom-container gray">
+	<%= render 'form', subscriber: @subscriber %>
+</div>
+
+
 <% if false %>
-<%= render 'form', subscriber: @subscriber %>
 <%= link_to 'Back', subscribers_path %>
 <% end %>

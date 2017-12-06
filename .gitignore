@@ -18,6 +18,3 @@
 
 # Ignore Env file.
 .env
-
-/db/*
-/app/models/*

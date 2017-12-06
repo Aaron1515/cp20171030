@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :skip => [:registrations] 
+    as :user do
+      get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+      put 'users' => 'devise/registrations#update', :as => 'admin_registration'
+    end
+
   devise_for :admins, :skip => [:registrations] 
     as :admin do
       get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
       put 'admins' => 'devise/registrations#update', :as => 'admin_registration'
     end
+
   resources :subscribers
   resources :contacts
   
@@ -45,8 +51,7 @@ Rails.application.routes.draw do
 
   get 'download/robot_car'
   get 'download/fundamental'
-
-
+  
 
   root 'welcome#index'
 

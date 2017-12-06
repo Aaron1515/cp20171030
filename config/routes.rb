@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :subscribers, :only => [:new]
+  resources :subscribers, :only => [:new, :create]
   resources :contacts, :only => [:new, :create]
   
   get 'welcome/index'

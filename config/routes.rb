@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :subscribers
-  resources :contacts
+  resources :subscribers, :only => [:new]
+  resources :contacts, :only => [:new, :create]
   
   get 'welcome/index'
   get 'welcome/test'

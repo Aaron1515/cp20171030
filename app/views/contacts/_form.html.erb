@@ -1,37 +1,38 @@
-<%= form_for(contact) do |f| %>
+  
+<%= form_for(@contact, :html => { :class => "" }) do |f| %>
   <% if contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2 style="color:maroon;"><%= pluralize(contact.errors.count, "Error") %> - Please correct these items:</h2>
 
       <ul>
       <% contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li style="color:maroon;"><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email,class: "form-control"  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :organization %>
-    <%= f.text_field :organization %>
+    <%= f.text_field :organization,class: "form-control"  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :comment %>
-    <%= f.text_area :comment %>
+    <%= f.text_area :comment,class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Submit Info" %>
+    <%= f.submit "Submit Info",class: "btn-submit", style: "float:right;" %>
   </div>
 <% end %>

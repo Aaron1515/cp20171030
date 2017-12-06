@@ -29,10 +29,10 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         format.html { redirect_to root_path, notice: 'Your information was successfully sent.' }
-        format.json { render :show, status: :created, location: @contact }
+        # format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        # format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
   end
